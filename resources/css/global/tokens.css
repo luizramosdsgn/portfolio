@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/* =========================================
+   DESIGN SYSTEM & TOKENS GLOBAIS
+   A união perfeita: Semântica + Escalabilidade
+   ========================================= */
+
+:root {
+	/* 1. TIPOGRAFIA */
+	--font-display: "Space Grotesk", Arial, Helvetica, sans-serif;
+	--font-body: "Metropolis", Arial, Helvetica, sans-serif;
+
+	/* =========================================
+	   2. TOKENS DE CORES (DARK MODE - PADRÃO)
+	   ========================================= */
+
+	/* Backgrounds e Superfícies (A base do site) */
+	--bg-primary: #151515;
+	--bg-footer: #101010;
+	--surface-1: #1c1c1c;
+	--surface-2: #222222;
+	--surface-3: #2a2a2a;
+	--bg-inverse: #ffffff; /* Fundo de contraste absoluto */
+
+	/* Textos e Tintas (Inks) */
+	--text-primary: #cccccc;
+	--text-secondary: #999999;
+	--text-tertiary: #666666;
+	--text-inverse-primary: rgba(21, 21, 21, 0.8);
+	--text-inverse-secondary: rgba(21, 21, 21, 0.6);
+
+	/* Cores de Marca / Ação (Accent) */
+	--accent: #3179ff;
+	--accent-dim: rgba(49, 121, 255, 0.12);
+	--accent-glow: rgba(49, 121, 255, 0.25);
+
+	/* Bordas e Divisórias */
+	--border-subtle: rgba(255, 255, 255, 0.06);
+	--border-base: rgba(255, 255, 255, 0.15);
+	--element-overlay: rgba(255, 255, 255, 0.5);
+
+	/* =========================================
+	   3. TOKENS DE FORMA E MOVIMENTO (MISC)
+	   ========================================= */
+	--radius-sm: 8px;
+	--radius-md: 12px;
+	--radius-pill: 100px;
+	--transition-base: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+	--shadow-base: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================================
+   TEMA CLARO (LIGHT MODE)
+   ========================================= */
+[data-theme="light"] {
+	/* Backgrounds e Superfícies (Agora ficam claros) */
+	--bg-primary: #ffffff;
+	--bg-footer: #dddddd;
+	--surface-1: #f5f5f5;
+	--surface-2: #ebebeb;
+	--surface-3: #e0e0e0;
+	--bg-inverse: #151515;
+
+	/* Textos e Tintas (Agora ficam escuros) */
+	--text-primary: rgba(21, 21, 21, 0.8);
+	--text-secondary: rgba(21, 21, 21, 0.6);
+	--text-tertiary: rgba(21, 21, 21, 0.4);
+	--text-inverse-primary: #cccccc;
+	--text-inverse-secondary: #999999;
+
+	/* Bordas e Divisórias (Adaptadas pro fundo branco) */
+	--border-subtle: rgba(21, 21, 21, 0.06);
+	--border-base: rgba(21, 21, 21, 0.15);
+	--element-overlay: rgba(21, 21, 21, 0.5);
+
+	/* Sombra mais suave para não pesar no modo claro */
+	--shadow-base: 0 4px 24px rgba(0, 0, 0, 0.08);
+
+	/* Nota: A cor da marca (--accent) permanece igual em ambos os temas! */
+}

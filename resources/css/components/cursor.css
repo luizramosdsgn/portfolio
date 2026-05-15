@@ -1,0 +1,68 @@
+/* =========================================
+   CUSTOM CURSOR
+   ========================================= */
+
+@media (min-width: 1025px) {
+	/* Hide native cursor for desktop */
+	body,
+	a,
+	button,
+	.elementor-button,
+	.btn,
+	input,
+	textarea,
+	.btn-filtro,
+	.btn-tab,
+	.btn-seta,
+	.card-servico,
+	.card-processo {
+		cursor: none !important;
+	}
+
+	.cursor-dot {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 8px;
+		height: 8px;
+		background-color: var(--accent); /* Novo Token Principal */
+		border-radius: 50%;
+		pointer-events: none;
+		z-index: 9999;
+	}
+
+	.cursor-outline {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 40px;
+		height: 40px;
+		border: 2px solid var(--accent); /* Novo Token Principal */
+		background-color: var(
+			--accent-dim
+		); /* Token para fundo translúcido sutil */
+		border-radius: 50%;
+		pointer-events: none;
+		z-index: 9998;
+		transition:
+			width 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+			height 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+			background-color var(--transition-base); /* Tempo de transição unificado */
+	}
+
+	.cursor-outline.hover-actived {
+		width: 64px;
+		height: 64px;
+		background-color: var(
+			--accent-glow
+		); /* Token para fundo translúcido forte no hover */
+	}
+}
+
+/* Ocultar em dispositivos com tela de toque/telas menores para evitar bug com touch */
+@media (max-width: 1024px) {
+	.cursor-dot,
+	.cursor-outline {
+		display: none !important;
+	}
+}

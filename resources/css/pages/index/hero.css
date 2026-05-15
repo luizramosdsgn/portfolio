@@ -1,0 +1,203 @@
+@charset "UTF-8";
+
+/* =========================================
+   8. SEÇÃO HERO
+   ========================================= */
+
+.hero {
+	width: 100%;
+}
+
+/* Frame 1 */
+.hero-container {
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	/* Paddings do seu Figma: top right bottom left */
+	padding: 32px 60px 0 60px;
+	display: flex;
+}
+
+/* Frame 2 */
+.hero-content {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 40px;
+}
+
+/* Lado Esquerdo */
+.hero-text-side {
+	flex: 1; /* Ocupa metade do espaço */
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	max-width: 750px;
+}
+
+.hero-titulos h1 {
+	margin-bottom: 16px;
+}
+
+/* Botões */
+.hero-botoes {
+	display: flex;
+	gap: 16px;
+}
+
+/* =========================================
+   Lado Direito (Imagem e Bullets)
+   ========================================= */
+.hero-image-side {
+	flex: 1;
+	position: relative; /* Essencial para os bullets flutuarem sobre a foto */
+	display: flex;
+	justify-content: center;
+}
+
+.hero-foto {
+	max-width: 100%;
+	object-fit: cover;
+}
+
+/* Estilo Base dos Bullets */
+.bullet {
+	position: absolute;
+	padding: 8px 18px;
+	background-color: var(
+		--element-overlay
+	); /* Atualizado para Token Semântico */
+	color: var(
+		--bg-footer
+	); /* Mantém o contraste de legibilidade baseado na sua cor antiga */
+	border-radius: var(--radius-pill); /* Atualizado para Token Semântico */
+	font-weight: 400;
+	--webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(8px); /* Efeito de vidro borrado, fica lindo! */
+	transition:
+		background-color 0.5s ease,
+		color 0.5s ease,
+		transform 0.5s ease;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Mantido fixo para profundidade sutil da imagem */
+	border: var(--border-base) 0.2px solid; /* Atualizado para Token Semântico */
+}
+
+/* Estado Ativo do Bullet (A cor que vai circular) */
+.bullet.ativo {
+	font-weight: 400;
+	background-color: var(--accent); /* Atualizado para Token Semântico */
+	color: #ffffff; /* Mantido fixo para contrastar sempre com a cor do Accent */
+	transform: scale(1.05) translateY(-10px); /* Juntei as duas transformações num só comando para evitar bugs */
+	border: none; /* Remove a borda quando ativo para destacar mais a cor */
+}
+
+/* Posições Individuais de cada Bullet */
+.b-1 {
+	top: 10%;
+	left: 5%;
+}
+.b-2 {
+	top: 20%;
+	right: 5%;
+}
+.b-3 {
+	bottom: 50%;
+	left: 10%;
+}
+.b-4 {
+	bottom: 25%;
+	right: 5%;
+}
+
+/* =========================================
+   9. RESPONSIVIDADE: SEÇÃO HERO
+   ========================================= */
+
+/* Ajustes para Tablets e telas médias */
+@media (max-width: 920px) {
+	.hero-container {
+		/* Reduzimos os paddings laterais de 60px para 32px */
+		padding: 48px 32px 48px 32px;
+		min-height: auto;
+	}
+
+	.hero-content {
+		gap: 24px;
+	}
+
+	.hero-botoes {
+		justify-content: center;
+	}
+
+	.hero-titulos h1 {
+		font-size: 2.75rem;
+	}
+
+	.btn {
+		min-width: fit-content;
+		max-width: none;
+	}
+}
+
+/* Ajustes para Celulares (Mobile) */
+@media (max-width: 768px) {
+	.hero-container {
+		padding: 0 24px 32px 24px;
+	}
+
+	.hero-content {
+		/* Empilha os elementos: texto em cima, foto embaixo */
+		flex-direction: column-reverse;
+		text-align: center;
+		min-height: 100dvh;
+	}
+
+	/* Centraliza o conteúdo da esquerda no mobile */
+	.hero-text-side {
+		align-items: center;
+		max-width: 95%;
+	}
+
+	.hero-titulos h1 {
+		font-size: 2.25rem;
+	}
+
+	/* Botões empilhados e ocupando a largura total */
+	.hero-botoes {
+		gap: 12px;
+		width: 100%;
+		transform: scale(
+			0.8
+		); /* Alterado de 'scale: 0.8;' para melhor compatibilidade com browsers antigos */
+	}
+
+	/* Ajustes da Imagem e dos Bullets no Mobile */
+	.hero-image-side {
+		width: 100%;
+		max-width: 90%;
+	}
+
+	.bullet {
+		padding: 8px 16px;
+		font-size: 0.875rem;
+	}
+
+	/* Reposiciona os bullets mais para perto da foto */
+	.b-1 {
+		top: 20%;
+		left: 5%;
+	}
+	.b-2 {
+		top: 26%;
+		right: 5%;
+	}
+	.b-3 {
+		bottom: 40%;
+		left: 0%;
+	}
+	.b-4 {
+		bottom: 25%;
+		right: 0%;
+	}
+}

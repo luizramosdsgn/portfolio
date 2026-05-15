@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+/* =========================================
+   SEÇÃO: CTA FINAL
+   ========================================= */
+
+.cta-final {
+	padding: 100px 0;
+	height: 90vh;
+	display: flex;
+	align-items: center;
+}
+
+.cta-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin: 0 auto;
+	gap: 24px;
+}
+
+.cta-container p {
+	font-size: 1.125rem;
+	color: var(--text-secondary); /* Atualizado para Token Semântico */
+	max-width: 800px;
+	margin-bottom: 16px;
+}
+
+.cta-botoes {
+	display: flex;
+	gap: 16px;
+	justify-content: center;
+}

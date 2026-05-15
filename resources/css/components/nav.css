@@ -1,0 +1,284 @@
+@charset "UTF-8";
+
+/* =========================================
+   6. CABEÇALHO (HEADER)
+   ========================================= */
+
+#header-container {
+	width: 90%;
+	padding: 24px 0; /* Espaçamento em cima e embaixo do menu */
+	background-color: transparent;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+}
+
+/* Flexbox para separar Frame 2 (Esquerda) e Frame 3 (Direita) */
+.nav-container {
+	z-index: 10;
+	top: 3%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5%;
+	padding-left: 1%;
+	border-radius: var(--radius-pill); /* Atualizado para Token Semântico */
+	backdrop-filter: blur(10px);
+	background-color: rgba(255, 255, 255, 0.01);
+	border: rgba(59, 101, 179, 0.336) 1px solid;
+}
+
+/* ==================
+   Frame 2: Instagram
+   ================== */
+a.link-insta {
+	display: flex;
+}
+
+div.meu-insta {
+	display: flex;
+	gap: 0.5em;
+	align-items: center;
+	justify-content: center;
+}
+
+img.img-insta {
+	width: 1.75em;
+	height: 1.75em;
+	border: 1px solid var(--accent); /* Atualizado para Token Semântico e 1px real */
+	border-radius: 50%;
+}
+
+div.textos-insta {
+	position: inline-block;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.25em;
+	transition: all var(--transition-base); /* Atualizado para Token Semântico */
+}
+
+p.meu-nome-insta {
+	font-size: 0.8rem;
+	color: var(--text-primary); /* Atualizado para Token Semântico */
+	line-height: 1;
+	transition: all var(--transition-base); /* Atualizado para Token Semântico */
+}
+
+p.meu-arroba-insta {
+	font-size: 0.7rem;
+	color: var(--text-secondary); /* Atualizado para Token Semântico */
+	line-height: 1;
+}
+
+/* ==================
+   Frame 3: Menu e Toggle
+   ================== */
+.nav-menu {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+}
+
+.nav-links {
+	display: flex;
+	gap: 32px;
+	list-style-type: none;
+}
+
+/* Configuração base dos links */
+.nav-links a {
+	position: relative;
+	color: var(--text-secondary); /* Atualizado para Token Semântico */
+	font-weight: 400;
+	transition: color var(--transition-base); /* Atualizado para Token Semântico */
+	padding-bottom: 4px;
+}
+
+/* A linha invisível (largura 0) criada via CSS */
+.nav-links a::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: var(--accent); /* Atualizado para Token Semântico */
+	transition: width var(--transition-base); /* Atualizado para Token Semântico */
+}
+
+/* Muda a cor e o peso da fonte no hover/ativo */
+.nav-links a:hover,
+.nav-links a.ativo {
+	color: var(--accent); /* Atualizado para Token Semântico */
+	font-weight: 600; /* Unificado o font-weight que estava duplicado no arquivo original */
+}
+
+/* Expande a linha para 100% no hover e no link ativo */
+.nav-links a:hover::after,
+.nav-links a.ativo::after {
+	width: 100%;
+}
+
+/* ==================
+   Botão de Tema
+   ================== */
+.btn-tema {
+	background: none;
+	border: 1px solid var(--accent-dim); /* Ajuste para Token Semântico para melhor renderização */
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	padding: 8px 16px;
+	border-radius: var(--radius-pill); /* Atualizado para Token Semântico */
+	background-color: rgba(255, 255, 255, 0.1);
+	transition: background-color var(--transition-base); /* Atualizado para Token Semântico */
+
+	img {
+		width: 20px;
+		height: 20px;
+		transition:
+			opacity var(--transition-base),
+			transform var(--transition-base); /* Atualizado para Token Semântico */
+	}
+}
+
+.btn-tema:hover {
+	background-color: var(--accent); /* Atualizado para Token Semântico */
+}
+
+.icone-lua {
+	opacity: 1;
+	transform: scale(1.1);
+}
+.icone-sol {
+	opacity: 0.3;
+	transform: scale(0.9);
+}
+
+/* ESTADO TEMA CLARO */
+[data-theme="light"] .icone-sol {
+	opacity: 1;
+	transform: scale(1.1);
+}
+[data-theme="light"] .icone-lua {
+	opacity: 0.3;
+	transform: scale(0.9);
+}
+
+/* =========================================
+   7. RESPONSIVIDADE (MOBILE)
+   ========================================= */
+
+.btn-mobile {
+	display: none;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 8px;
+	z-index: 1001;
+}
+
+/* Criando as 3 linhas do Hambúrguer apenas com CSS */
+.hamburguer {
+	display: block;
+	width: 24px;
+	height: 2px;
+	background-color: var(--text-primary); /* Atualizado para Token Semântico */
+	position: relative;
+	transition: background-color var(--transition-base); /* Atualizado para Token Semântico */
+}
+
+.hamburguer::before,
+.hamburguer::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: var(--text-primary); /* Atualizado para Token Semântico */
+	position: absolute;
+	transition:
+		transform var(--transition-base),
+		top var(--transition-base); /* Atualizado para Token Semântico */
+}
+
+.hamburguer::before {
+	top: -8px;
+}
+.hamburguer::after {
+	top: 8px;
+}
+
+/* Animação: Transforma o hambúrguer em um "X" */
+.nav-menu.ativo .hamburguer {
+	background-color: transparent;
+}
+.nav-menu.ativo .hamburguer::before {
+	top: 0;
+	transform: rotate(45deg);
+}
+.nav-menu.ativo .hamburguer::after {
+	top: 0;
+	transform: rotate(-45deg);
+}
+
+/* Adaptações para telas menores */
+@media screen and (max-width: 768px) {
+	.btn-mobile {
+		display: block;
+	}
+
+	a.link-insta {
+		position: relative;
+		display: none;
+	}
+
+	.nav-menu {
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.nav-container {
+		padding: 0.2em 0.5em 0.2em 0.2em;
+		border: none;
+		border-top: rgba(59, 101, 179, 0.336) 1px solid;
+		background-color: var(--bg-primary); /* Atualizado para Token Semântico */
+	}
+
+	.btn-tema {
+		padding: 6px 12px;
+	}
+
+	/* Redesenha os links para ficarem em uma lista vertical escondida */
+	.nav-links {
+		position: absolute;
+		top: 97%;
+		left: 0;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		gap: 32px;
+		padding: 40px 0;
+		border-bottom: rgba(59, 101, 179, 0.336) 1px solid;
+
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-20px);
+		transition: all var(--transition-base); /* Atualizado para Token Semântico */
+	}
+
+	/* Menu Mobile Ativo */
+	.nav-menu.ativo .nav-links {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+		backdrop-filter: blur(10px);
+		background-color: var(--bg-primary); /* Atualizado para Token Semântico */
+		--webkit-backdrop-filter: blur(10px);
+		border-radius: var(
+			--radius-md
+		); /* Suaviza as bordas no mobile usando Token */
+	}
+}

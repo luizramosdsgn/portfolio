@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/* =========================================
+   1. FONTES CUSTOMIZADAS
+   ========================================= */
+
+@font-face {
+	font-family: "Metropolis";
+	src: url("../assets/fonts/Metropolis-Regular.otf") format("opentype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap; /* Otimização de Performance (Lighthouse) */
+}
+
+@font-face {
+	font-family: "Metropolis";
+	src: url("../assets/fonts/Metropolis-SemiBold.otf") format("opentype");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap; /* Otimização de Performance (Lighthouse) */
+}
+
+/* =========================================
+   2. TÍTULOS BÁSICOS
+   ========================================= */
+
+h1,
+h2,
+h5,
+h6 {
+	font-family: var(--font-display);
+	color: var(--text-primary);
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 3.2rem;
+}
+
+h3,
+h4 {
+	font-family: var(--font-display);
+	color: var(--text-primary);
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+/* =========================================
+   3. DESTAQUES E UTILITÁRIOS DE TEXTO
+   ========================================= */
+
+.destaque-h1 {	
+	background-image: linear-gradient(to right, var(--accent), #89b2ff, #0a60ff);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+p {
+	font-size: 1rem;
+	/* A cor e a fonte já são herdadas do body no style.css! */
+}

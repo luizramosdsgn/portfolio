@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+/* ════════════════════════════════════════════
+   FUNDO & LAYOUT DA PÁGINA
+════════════════════════════════════════════ */
+.imagem-fundo {
+	position: fixed;
+	top: 0;
+	right: 0;
+	pointer-events: none;
+}
+
+.pagina-contato {
+	padding: 56px 0 80px 0;
+	width: 100%;
+}
+
+/* ════════════════════════════════════════════
+   CABEÇALHO DA PÁGINA
+════════════════════════════════════════════ */
+.contato-header {
+	text-align: center;
+	max-width: 700px;
+	margin: 0 auto 64px auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+}
+
+/* ════════════════════════════════════════════
+   CONTAINER DO FORMULÁRIO
+   (sobrescreve q-group para centralizar e limitar largura)
+════════════════════════════════════════════ */
+.contato-container .q-group {
+	max-width: 932px;
+	margin: 0 auto;
+}
+
+.formulario-briefing {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+/* ════════════════════════════════════════════
+   CHECKBOX (RADIO E CHECKBOX CUSTOM)
+   — não existe no briefing, exclusivo do contato
+════════════════════════════════════════════ */
+.q-card.checkbox-group {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.q-card.checkbox-group label {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-size: 1rem;
+	font-weight: 400;
+	color: var(--text-secondary);
+	margin-left: 0;
+	cursor: pointer;
+	transition: color var(--transition-base);
+}
+
+.q-card.checkbox-group label:hover {
+	color: var(--text-primary);
+}
+
+input[type="checkbox"] {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 24px;
+	height: 24px;
+	flex-shrink: 0;
+	padding: 0;
+	margin: 0;
+	border: 2px solid var(--border-subtle);
+	background-color: transparent;
+	border-radius: var(--radius-sm);
+	cursor: pointer;
+	display: grid;
+	place-content: center;
+	transition: border-color var(--transition-base);
+}
+
+input[type="checkbox"]::before {
+	content: "";
+	width: 14px;
+	height: 14px;
+	transform: scale(0);
+	transition: 120ms transform ease-in-out;
+	background-color: var(--accent);
+	transform-origin: center;
+	clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+	transform: scale(1);
+}
+
+input[type="checkbox"]:checked {
+	border-color: var(--accent);
+}
+
+/* ════════════════════════════════════════════
+   BOTÃO DE SUBMIT
+════════════════════════════════════════════ */
+
+.btn-submit {
+	min-width: 100%;
+	padding: 14px 24px;
+	font-size: 1.1rem;
+	font-weight: 500;
+	margin-top: 8px;
+	border-radius: var(--radius-md);
+	color: var(--bg-inverse);
+	background-color: var(--accent);
+}
+
+.btn-submit:hover {
+	transform: translateY(-3px);
+	box-shadow: 0px 0px 28px var(--accent-glow);
+}
+
+/* ════════════════════════════════════════════
+   RESPONSIVIDADE
+════════════════════════════════════════════ */
+@media (max-width: 768px) {
+	.pagina-contato {
+		padding: 80px 0 64px 0;
+	}
+
+	.contato-container .q-group {
+		padding: 24px;
+	}
+
+	.two-col {
+		grid-template-columns: 1fr;
+	}
+
+	.formulario-briefing {
+		gap: 16px;
+	}
+}
+
+@media (max-width: 480px) {
+	.btn-submit {
+		font-size: 1rem;
+		padding: 16px;
+	}
+}

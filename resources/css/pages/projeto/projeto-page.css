@@ -1,0 +1,486 @@
+@charset "UTF-8";
+
+/* =========================================
+   PÁGINA DE PROJETO — ESTILOS
+   ========================================= */
+
+/* ---- LAYOUT GERAL ---- */
+.pagina-projeto {
+	width: 100%;
+	padding-bottom: 100px;
+}
+
+/* =========================================
+   HERO DO PROJETO
+   ========================================= */
+.projeto-hero {
+	position: relative;
+	width: 100%;
+	height: 75vh;
+	min-height: 480px;
+	max-height: 800px;
+	overflow: hidden;
+}
+
+.projeto-hero-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transform: scale(1.05);
+	transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projeto-hero-img.carregada {
+	transform: scale(1);
+}
+
+.projeto-hero-overlay {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0) 20%,
+		rgba(0, 0, 0, 0.85) 100%
+	);
+}
+
+.projeto-hero-conteudo {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 0 0 56px 0;
+}
+
+.projeto-hero-conteudo .container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.projeto-hero-tags {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.projeto-hero-tags span {
+	background: rgba(255, 255, 255, 0.1);
+	color: rgba(255, 255, 255, 0.85);
+	padding: 6px 16px;
+	border-radius: var(--radius-pill);
+	font-size: 0.75rem;
+	backdrop-filter: blur(8px);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	letter-spacing: 0.5px;
+}
+
+.projeto-hero-conteudo h1 {
+	font-family: var(--font-display);
+	font-size: clamp(2rem, 5vw, 3.5rem);
+	color: #ffffff;
+	line-height: 1.1;
+	font-weight: 700;
+}
+
+.projeto-hero-meta {
+	display: flex;
+	gap: 24px;
+	align-items: center;
+}
+
+.projeto-hero-meta span {
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 0.85rem;
+}
+
+.projeto-hero-meta .separador {
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.3);
+}
+
+/* =========================================
+   BOTÃO VOLTAR
+   ========================================= */
+.btn-voltar {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 20px;
+	border-radius: var(--radius-pill);
+	background: var(--surface-2);
+	border: 1px solid var(--border-base);
+	color: var(--text-secondary);
+	font-size: 0.85rem;
+	transition: all var(--transition-base);
+	margin-top: 40px;
+	width: fit-content;
+}
+
+.btn-voltar:hover {
+	background: var(--surface-3);
+	color: var(--text-primary);
+	transform: translateX(-4px);
+	opacity: 1;
+}
+
+.btn-voltar svg {
+	flex-shrink: 0;
+	transition: transform var(--transition-base);
+}
+
+.btn-voltar:hover svg {
+	transform: translateX(-3px);
+}
+
+/* =========================================
+   SEÇÃO: SOBRE O PROJETO
+   ========================================= */
+.projeto-sobre {
+	padding: 80px 0 64px;
+}
+
+.projeto-sobre-grid {
+	display: grid;
+	grid-template-columns: 1fr 340px;
+	gap: 80px;
+	align-items: start;
+}
+
+/* Coluna Esquerda — Descrição */
+.projeto-descricao h2 {
+	font-family: var(--font-display);
+	font-size: clamp(1.5rem, 2.5vw, 2rem);
+	color: var(--text-primary);
+	margin-bottom: 24px;
+	font-weight: 700;
+}
+
+.projeto-descricao p {
+	color: var(--text-secondary);
+	font-size: 1rem;
+	line-height: 1.8;
+	white-space: pre-line;
+	max-width: 800px;
+}
+
+/* Link externo (opcional) */
+.projeto-link-externo {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	margin-top: 32px;
+	padding: 14px 28px;
+	border-radius: var(--radius-pill);
+	background: var(--accent);
+	color: #fff;
+	font-size: 0.9rem;
+	font-weight: 600;
+	transition: all var(--transition-base);
+}
+
+.projeto-link-externo:hover {
+	background: #538bff;
+	transform: translateY(-3px);
+	color: #fff;
+	opacity: 1;
+}
+
+/* Coluna Direita — Ficha Técnica */
+.projeto-ficha {
+	background: var(--surface-1);
+	border: 1px solid var(--border-subtle);
+	border-radius: var(--radius-md);
+	padding: 32px;
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+	position: sticky;
+	top: 120px;
+}
+
+.ficha-item {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.ficha-item label {
+	font-size: 0.72rem;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	color: var(--text-tertiary);
+	font-weight: 600;
+}
+
+.ficha-item span,
+.ficha-item p {
+	color: var(--text-primary);
+	font-size: 0.95rem;
+}
+
+.ficha-servicos {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 4px;
+}
+
+.ficha-servicos span {
+	background: var(--accent-dim);
+	color: var(--accent);
+	padding: 4px 14px;
+	border-radius: var(--radius-pill);
+	font-size: 0.8rem;
+	border: 1px solid rgba(49, 121, 255, 0.2);
+}
+
+.ficha-divisor {
+	width: 100%;
+	height: 1px;
+	background: var(--border-subtle);
+}
+
+/* =========================================
+   GALERIA DE IMAGENS
+   ========================================= */
+.projeto-galeria {
+	padding: 0 0 80px;
+}
+
+.projeto-galeria h2 {
+	font-family: var(--font-display);
+	font-size: clamp(1.3rem, 2vw, 1.6rem);
+	color: var(--text-primary);
+	margin-bottom: 32px;
+	font-weight: 700;
+}
+
+.galeria-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+	gap: 20px;
+}
+
+.galeria-grid img {
+	width: 100%;
+	border-radius: var(--radius-md);
+	object-position: top center;
+	object-fit: cover;
+	aspect-ratio: 3 / 4;
+	transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+	cursor: zoom-in;
+	background: var(--surface-2);
+}
+
+.galeria-grid img:hover {
+	transform: scale(1.02);
+}
+
+.galeria-grid img:first-child:only-child,
+.galeria-grid img:first-child:nth-last-child(2),
+.galeria-grid img:nth-child(3):last-child {
+	/* Quando há 1 ou 2 imagens, não deixar em miniaturas */
+	aspect-ratio: 9 / 16;
+}
+
+/* =========================================
+   LIGHTBOX (zoom nas fotos da galeria)
+   ========================================= */
+.lightbox-overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.92);
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+	cursor: zoom-out;
+}
+
+.lightbox-overlay.ativo {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.lightbox-overlay img {
+	max-width: 90vw;
+	max-height: 90vh;
+	object-fit: contain;
+	border-radius: var(--radius-md);
+	transform: scale(0.95);
+	transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lightbox-overlay.ativo img {
+	transform: scale(1);
+}
+
+.lightbox-fechar {
+	position: absolute;
+	top: 24px;
+	right: 28px;
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	color: #fff;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	font-size: 1.2rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background 0.2s ease;
+}
+
+.lightbox-fechar:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+/* =========================================
+   CTA NAVEGAÇÃO ENTRE PROJETOS
+   ========================================= */
+.projeto-navegacao {
+	padding: 64px 0 0;
+	border-top: 1px solid var(--border-subtle);
+}
+
+.projeto-navegacao .container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 24px;
+
+	a {
+		opacity: 1 !important;
+	}
+}
+
+.nav-projeto-btn {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 28px 32px;
+	border-radius: var(--radius-md);
+	background: var(--surface-1);
+	border: 1px solid var(--border-subtle);
+	transition: all var(--transition-base);
+	color: var(--text-primary);
+}
+
+.nav-projeto-btn:hover {
+	background: var(--surface-2);
+	border-color: var(--border-base);
+	transform: translateY(-4px);
+	opacity: 1;
+}
+
+.nav-projeto-btn.proximo {
+	text-align: right;
+	align-items: flex-end;
+}
+
+.nav-projeto-btn.anterior {
+	align-items: flex-start;
+}
+
+.nav-projeto-btn label {
+	font-size: 0.72rem;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	color: var(--text-tertiary);
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.nav-projeto-btn strong {
+	font-size: 1rem;
+	color: var(--text-primary);
+}
+
+/* =========================================
+   ESTADO DE ERRO (projeto não encontrado)
+   ========================================= */
+.projeto-erro {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 60vh;
+	gap: 16px;
+	text-align: center;
+}
+
+.projeto-erro h1 {
+	font-size: 2rem;
+	color: var(--text-primary);
+}
+
+.projeto-erro p {
+	color: var(--text-secondary);
+}
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+@media (max-width: 1024px) {
+	.projeto-sobre-grid {
+		grid-template-columns: 1fr 280px;
+		gap: 48px;
+	}
+}
+
+@media (max-width: 768px) {
+	.projeto-hero {
+		height: 60vh;
+		min-height: 380px;
+	}
+
+	.projeto-hero-conteudo {
+		padding-bottom: 40px;
+	}
+
+	.projeto-hero-meta {
+		flex-wrap: wrap;
+		gap: 12px;
+	}
+
+	.projeto-sobre {
+		padding: 56px 0 48px;
+	}
+
+	.projeto-sobre-grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.projeto-ficha {
+		position: static;
+	}
+
+	.galeria-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.projeto-navegacao .container {
+		grid-template-columns: 1fr;
+	}
+
+	.nav-projeto-btn.proximo {
+		text-align: left;
+		align-items: flex-start;
+	}
+}
+
+@media (max-width: 480px) {
+	.projeto-hero-conteudo h1 {
+		font-size: 1.8rem;
+	}
+}

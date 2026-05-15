@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+/* =========================================
+   10. SECÇÃO DE SERVIÇOS
+   ========================================= */
+
+.servicos {
+	width: 100%;
+	padding: 64px 0;
+	background-color: var(--surface-1);
+}
+
+.servicos-header {
+	margin-bottom: 48px;
+	display: flex;
+	justify-content: center;
+}
+
+/* Flexbox para alinhar os 3 cards */
+.servicos-cards {
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+	width: 100%;
+	max-width: 1230px;
+	margin: 0 auto;
+	flex-wrap: wrap;
+}
+
+/* O Card Base */
+.card-servico {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 16px;
+	gap: 16px;
+	isolation: isolate;
+	overflow: hidden;
+
+	width: 320px;
+	min-width: 320px;
+	max-width: 542px;
+	height: 220px;
+	transition:
+		width 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+		background-color var(--transition-base);
+
+	border: 1px solid var(--accent);
+	border-radius: var(--radius-md);
+}
+
+/* O que acontece no Hover do Card */
+.card-servico:hover {
+	width: 542px;
+	padding-right: 0;
+}
+
+/* Lado Esquerdo (Textos e Ícones) */
+.card-conteudo {
+	max-width: 288px;
+	height: 188px;
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	position: relative;
+	justify-content: flex-end;
+}
+
+.card-icone {
+	width: 42px;
+	height: 42px;
+	position: absolute;
+	top: 1px;
+	right: 2px;
+}
+
+.card-conteudo h3 {
+	font-size: 1.3rem;
+	color: var(--text-primary);
+	line-height: 1;
+}
+
+.card-conteudo h3 span {
+	font-size: 0.9rem;
+}
+
+.card-conteudo p {
+	color: var(--text-secondary);
+}
+
+/* Lado Direito (Imagem que aparece) */
+.card-imagem-hover {
+	width: 0;
+	opacity: 0;
+	position: relative;
+	display: flex;
+	transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-servico:hover .card-imagem-hover {
+	width: 222px;
+	opacity: 1;
+}
+
+/* Imagem cobrindo o espaço do lado direito */
+.img-bg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-left: 1px solid var(--accent);
+}
+
+/* =========================================
+   11. RESPONSIVIDADE: SECÇÃO DE SERVIÇOS
+   ========================================= */
+
+@media (max-width: 1100px) {
+	.servicos-cards {
+		flex-wrap: wrap;
+	}
+}
+
+@media (max-width: 768px) {
+	.servicos {
+		padding: 64px 0;
+	}
+
+	.servicos-cards {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.card-servico {
+		width: 100%;
+		max-width: 350px;
+		height: auto;
+		min-height: 220px;
+		transition: background-color var(--transition-base);
+	}
+
+	.card-servico:hover {
+		width: 100%;
+		max-width: 350px;
+		padding-right: 16px;
+	}
+
+	.card-servico:hover .card-imagem-hover {
+		display: none;
+		width: 0;
+		opacity: 0;
+	}
+
+	.card-conteudo {
+		max-width: 100%;
+		width: 100%;
+	}
+}

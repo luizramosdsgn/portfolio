@@ -1,0 +1,19 @@
+# Arquivo de configuração local com segredos (webhook, chaves, etc.)
+# Gerado automaticamente pelo GitHub Actions no deploy — não commitar!
+resources/js/contato/config.js
+
+# Dependências Node (se usar futuramente)
+node_modules/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/settings.json
+*.swp
+*.swo
+
+# Logs
+*.log

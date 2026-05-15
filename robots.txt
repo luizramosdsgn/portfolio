@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /obrigado.html
+Disallow: /projeto.html
+
+Sitemap: https://luizramos.com.br/sitemap.xml

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Portfólio | Luiz Ramos</title>
+		<link
+			rel="shortcut icon"
+			href="./resources/assets/icons/global/logo.svg"
+			type="image/svg+xml"
+		/>
+
+		<!-- SEO -->
+		<meta
+			name="description"
+			content="Veja os projetos de identidade visual, sites e landing pages criados por Luiz Ramos para impulsionar negócios."
+		/>
+		<meta name="author" content="Luiz Ramos" />
+		<meta property="og:type" content="website" />
+		<!-- ALTERAR / CRIAR -->
+		<meta property="og:url" content="https://luizramos.com.br/portfolio" />
+		<meta property="og:title" content="Portfólio | Luiz Ramos" />
+		<meta
+			property="og:description"
+			content="Projetos de identidade visual, sites e landing pages."
+		/>
+		<!-- ALTERAR / CRIAR -->
+		<meta
+			property="og:image"
+			content="https://luizramos.com.br/resources/assets/img/global/thumb-compartilhamento.webp"
+		/>
+		<link rel="canonical" href="https://luizramos.com.br/portfolio" />
+
+		<!-- Otimização -->
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<!-- Fontes -->
+		<link
+			rel="preload"
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
+			as="style"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
+		/>
+
+		<!-- CSS Global -->
+		<link rel="stylesheet" href="./resources/css/global/style.css" />
+		<link rel="stylesheet" href="./resources/css/global/fontes.css" />
+		<link rel="stylesheet" href="./resources/css/global/tokens.css" />
+
+		<!-- CSS Components -->
+		<link rel="stylesheet" href="./resources/css/components/cursor.css" />
+		<link rel="stylesheet" href="./resources/css/components/nav.css" />
+
+		<link rel="stylesheet" href="./resources/css/components/btn-filtro.css" />
+		<link
+			rel="stylesheet"
+			href="./resources/css/components/cards-projeto.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./resources/css/pages/portfolio/portfolio-grid.css"
+		/>
+		<link rel="stylesheet" href="./resources/css/components/footer.css" />
+
+		<!-- CSS Components | Transição -->
+		<link rel="stylesheet" href="./resources/css/components/transicao.css" />
+	</head>
+	<body>
+		<!-- Tela de Transição -->
+		<div class="transicao-overlay ini-revelando ativo" id="transicao-overlay">
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+		</div>
+
+		<!-- Cursor Personalizado -->
+		<div class="cursor-dot" data-cursor-dot></div>
+		<div class="cursor-outline" data-cursor-outline></div>
+
+		<div id="header-container"></div>
+
+		<div class="imagem-fundo">
+			<img
+				src="./resources/assets/img/global/bg-lightness-1.webp"
+				alt="Fundo do portfólio"
+				loading="lazy"
+			/>
+		</div>
+
+		<main class="pagina-portfolio">
+			<div class="container trabalhos-container">
+				<div class="trabalhos-header header-pagina">
+					<span class="tag">Meu Acervo</span>
+					<div class="hero-titulos">
+						<h1>Projetos em <span class="destaque-h1">Destaque</span></h1>
+						<p>
+							Explore os detalhes de cada identidade visual, site e landing page
+							que construí.
+						</p>
+					</div>
+				</div>
+
+				<div class="trabalhos-filtros">
+					<button class="btn-filtro ativo" data-filter="todos">Todos</button>
+					<button class="btn-filtro" data-filter="identidade">Identidade Visual</button>
+					<button class="btn-filtro" data-filter="sm">Social Media</button>
+					<button class="btn-filtro" data-filter="web-design">Web design</button>
+				</div>
+
+				<div class="portfolio-grid" id="grid-projetos"></div>
+			</div>
+		</main>
+
+		<div id="footer-container"></div>
+
+		<!-- Scripts -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+			defer
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+			defer
+		></script>
+
+		<script src="./resources/js/components/header-footer.js"></script>
+		<script src="./resources/js/components/cta-principal.js" defer></script>
+
+		<script src="./resources/js/components/nav.js"></script>
+
+		<script src="./resources/js/components/banco-projetos.js"></script>
+		<script src="./resources/js/components/botoes-filtro.js"></script>
+
+		<script src="./resources/js/components/cursor.js" defer></script>
+		<script
+			src="./resources/js/portfolio/animacoes-portfolio.js"
+			defer
+		></script>
+		<script src="./resources/js/components/transicao.js" defer></script>
+	</body>
+</html>

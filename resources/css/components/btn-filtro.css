@@ -1,0 +1,38 @@
+/* ================== Filtros ================== */
+.trabalhos-filtros {
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+	margin-bottom: 48px;
+}
+
+.btn-filtro {
+	background: transparent;
+	border: 1px solid var(--accent); /* Atualizado para Token Semântico */
+	padding: 8px 24px;
+	border-radius: var(--radius-pill); /* Atualizado para Token Semântico */
+	color: var(--accent); /* Atualizado para Token Semântico */
+	font-family: var(--font-body); /* Atualizado para Token Semântico */
+	cursor: pointer;
+	transition: all var(--transition-base); /* Atualizado para Token Semântico */
+}
+
+.btn-filtro:hover,
+.btn-filtro.ativo {
+	background: var(--accent); /* Atualizado para Token Semântico */
+	border-color: var(--accent);
+	color: #ffffff; /* Fixo por conta do contraste no botão primário */
+}
+
+@media (max-width: 768px) {
+	.trabalhos-filtros {
+		flex-wrap: wrap;
+		gap: 12px;
+		padding: 0 16px;
+	}
+
+	.btn-filtro {
+		padding: 6px 16px;
+		font-size: 0.875rem;
+	}
+}

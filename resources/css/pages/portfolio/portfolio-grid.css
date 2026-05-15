@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+.imagem-fundo {
+	position: fixed;
+	top: 0;
+	right: 0;
+	pointer-events: none;
+}
+
+.pagina-portfolio {
+	padding: 56px 0 80px 0;
+	width: 100%;
+}
+
+.trabalhos-header {
+	text-align: center;
+	margin-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+	flex: 1;
+}
+
+/* =========================================
+   A GALERIA (FLEXBOX) DE PROJETOS
+   ========================================= */
+.portfolio-grid {
+	display: flex;
+	flex-wrap: wrap; /* Permite a quebra de linha automática */
+	justify-content: center; /* Centraliza os cards quando sobram espaços nas laterais */
+	gap: 32px;
+	width: 100%;
+}
+
+/* Ajuste fixo para os cards na página de portfólio */
+.portfolio-grid .card-projeto {
+	flex: 0 0 400px; /* Mágica do Flex: Não cresce (0), não encolhe (0), fixa em 400px */
+	height: 450px; /* Mesma proporção que usamos na Home */
+	scroll-snap-align: none; /* Remove o comportamento do carrossel */
+}
+
+/* =========================================
+   RESPONSIVIDADE DO FLEXBOX
+   ========================================= */
+@media (max-width: 900px) {
+	/* Em tablets, diminuímos um pouco o card para caberem 2 lado a lado */
+	.portfolio-grid .card-projeto {
+		flex: 0 0 350px;
+		height: 400px;
+	}
+}
+
+@media (max-width: 768px) {
+	.pagina-portfolio {
+		padding: 80px 0 64px 0;
+	}
+
+	.portfolio-grid {
+		gap: 24px;
+	}
+
+	/* No telemóvel, o card ocupa a tela toda, mas limitamos a 350px para não esticar muito */
+	.portfolio-grid .card-projeto {
+		flex: 0 0 100%;
+		max-width: 350px;
+		height: 400px;
+	}
+}

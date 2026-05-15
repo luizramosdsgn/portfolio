@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+/* =========================================
+   TELA DE TRANSIÇÃO (COLUNAS)
+   ========================================= */
+
+.transicao-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 99999;
+	pointer-events: none;
+	display: flex;
+}
+
+.transicao-overlay.ativo {
+	pointer-events: all;
+}
+
+.transicao-coluna {
+	flex: 1;
+	height: 100%;
+	background-color: var(
+		--accent
+	); /* Atualizado para Token Semântico Principal */
+	transform: translateY(-100%);
+	will-change: transform;
+	box-shadow: 1px 0 0 var(--accent); /* Evita pequenos gaps subpixel entre as colunas usando o Token */
+}
+
+/* 1. Quando clicamos num link: as colunas DESCEM cobrindo a tela atual */
+.transicao-overlay.cobrindo .transicao-coluna {
+	transform: translateY(0);
+	transition: transform 0.6s cubic-bezier(0.75, 0, 0.25, 1);
+}
+
+/* 2. Carga inicial da nova página (colunas JÁ ESPERANDO cobrindo a tela inteira) */
+.transicao-overlay.ini-revelando .transicao-coluna {
+	transform: translateY(0);
+	transition: none; /* Estado fixo inicial para bloquear visão enquanto JS inicializa */
+}
+
+/* 3. Após inicializar, as colunas TERMINAM DE DESCER, revelando a página nova */
+.transicao-overlay.revelando .transicao-coluna {
+	transform: translateY(100%);
+	transition: transform 0.6s cubic-bezier(0.75, 0, 0.25, 1);
+}
+
+/* =========================================
+   DELAYS PARA STAGGER EFFECT (ESQUERDA P/ DIREITA)
+   ========================================= */
+.transicao-overlay.cobrindo .transicao-coluna:nth-child(1) {
+	transition-delay: 0s;
+}
+.transicao-overlay.cobrindo .transicao-coluna:nth-child(2) {
+	transition-delay: 0.1s;
+}
+.transicao-overlay.cobrindo .transicao-coluna:nth-child(3) {
+	transition-delay: 0.2s;
+}
+.transicao-overlay.cobrindo .transicao-coluna:nth-child(4) {
+	transition-delay: 0.3s;
+}
+.transicao-overlay.cobrindo .transicao-coluna:nth-child(5) {
+	transition-delay: 0.4s;
+}
+
+.transicao-overlay.revelando .transicao-coluna:nth-child(1) {
+	transition-delay: 0s;
+}
+.transicao-overlay.revelando .transicao-coluna:nth-child(2) {
+	transition-delay: 0.1s;
+}
+.transicao-overlay.revelando .transicao-coluna:nth-child(3) {
+	transition-delay: 0.2s;
+}
+.transicao-overlay.revelando .transicao-coluna:nth-child(4) {
+	transition-delay: 0.3s;
+}
+.transicao-overlay.revelando .transicao-coluna:nth-child(5) {
+	transition-delay: 0.4s;
+}
+
+/* =========================================
+   RESET TOTAL
+   ========================================= */
+/* Depois que a transição termina de revelar a tela, as colunas sobem invisivelmente para se preparar para o próximo page flush */
+.transicao-overlay:not(.cobrindo):not(.ini-revelando):not(.revelando)
+	.transicao-coluna {
+	transform: translateY(-100%);
+	transition: none;
+}

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Projeto | Luiz Ramos</title>
+		<link
+			rel="shortcut icon"
+			href="./resources/assets/icons/global/logo.svg"
+			type="image/svg+xml"
+		/>
+
+		<!-- SEO -->
+		<meta
+			name="description"
+			content="Detalhes do projeto de design por Luiz Ramos."
+		/>
+		<meta name="author" content="Luiz Ramos" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://luizramos.com.br/projeto" />
+		<meta property="og:title" content="Projeto | Luiz Ramos" />
+		<meta
+			property="og:description"
+			content="Veja os detalhes deste projeto de identidade visual, site ou landing page."
+		/>
+		<link rel="canonical" href="https://luizramos.com.br/projeto" />
+
+		<!-- Otimização -->
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<!-- Fontes -->
+		<link
+			rel="preload"
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
+			as="style"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
+		/>
+
+		<!-- CSS Global -->
+		<link rel="stylesheet" href="./resources/css/global/style.css" />
+		<link rel="stylesheet" href="./resources/css/global/fontes.css" />
+		<link rel="stylesheet" href="./resources/css/global/tokens.css" />
+
+		<!-- CSS Components -->
+		<link rel="stylesheet" href="./resources/css/components/cursor.css" />
+		<link rel="stylesheet" href="./resources/css/components/nav.css" />
+		<link rel="stylesheet" href="./resources/css/components/footer.css" />
+
+		<!-- CSS Page -->
+		<link
+			rel="stylesheet"
+			href="./resources/css/pages/projeto/projeto-page.css"
+		/>
+
+		<!-- CSS Components | Transição -->
+		<link rel="stylesheet" href="./resources/css/components/transicao.css" />
+	</head>
+	<body>
+		<!-- Tela de Transição -->
+		<div class="transicao-overlay ini-revelando ativo" id="transicao-overlay">
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+		</div>
+
+		<!-- Cursor Personalizado -->
+		<div class="cursor-dot" data-cursor-dot></div>
+		<div class="cursor-outline" data-cursor-outline></div>
+
+		<div id="header-container"></div>
+
+		<!-- O conteúdo do projeto é injetado aqui pelo JS -->
+		<main class="pagina-projeto"></main>
+
+		<div id="footer-container"></div>
+
+		<!-- Scripts -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+		<script src="./resources/js/components/header-footer.js"></script>
+		<script src="./resources/js/components/nav.js"></script>
+
+		<!-- banco-projetos.js DEVE vir antes de projeto-page.js (define meusProjetos) -->
+		<script src="./resources/js/components/banco-projetos.js"></script>
+		<script src="./resources/js/projeto/projeto-page.js"></script>
+
+		<script src="./resources/js/components/cursor.js" defer></script>
+		<script src="./resources/js/components/transicao.js" defer></script>
+	</body>
+</html>

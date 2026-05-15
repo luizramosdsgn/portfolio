@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contato | Luiz Ramos</title>
+		<link
+			rel="shortcut icon"
+			href="./resources/assets/icons/global/logo.svg"
+			type="image/svg+xml"
+		/>
+
+		<!-- SEO -->
+		<meta
+			name="description"
+			content="Entre em contato com Luiz Ramos para solicitar uma proposta de identidade visual, site ou landing page para o seu negócio."
+		/>
+		<meta name="author" content="Luiz Ramos" />
+		<meta property="og:type" content="website" />
+		<!-- ALTERAR / CRIAR -->
+		<meta property="og:url" content="https://luizramos.com.br/contato" />
+		<meta property="og:title" content="Contato | Luiz Ramos" />
+		<meta
+			property="og:description"
+			content="Solicite uma proposta para identidade visual, site ou landing page."
+		/>
+		<!-- ALTERAR / CRIAR -->
+		<meta
+			property="og:image"
+			content="https://luizramos.com.br/assets/img/thumb-compartilhamento.webp"
+		/>
+		<link rel="canonical" href="https://luizramos.com.br/contato" />
+
+		<!-- Otimização -->
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<!-- Fontes -->
+		<link
+			rel="preload"
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
+			as="style"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
+		/>
+
+		<!-- CSS Global -->
+		<link rel="stylesheet" href="./resources/css/global/style.css" />
+		<link rel="stylesheet" href="./resources/css/global/fontes.css" />
+		<link rel="stylesheet" href="./resources/css/global/tokens.css" />
+
+		<!-- CSS Components -->
+		<link rel="stylesheet" href="./resources/css/components/cursor.css" />
+		<link rel="stylesheet" href="./resources/css/components/nav.css" />
+		<link rel="stylesheet" href="./resources/css/pages/briefing/briefing-form.css" />
+		<link rel="stylesheet" href="./resources/css/pages/contato/contato-form.css" />
+		<link rel="stylesheet" href="./resources/css/components/footer.css" />
+
+		<!-- CSS Components | Transição -->
+		<link rel="stylesheet" href="./resources/css/components/transicao.css" />
+	</head>
+	<body>
+		<!-- Tela de Transição -->
+		<div class="transicao-overlay ini-revelando ativo" id="transicao-overlay">
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+		</div>
+
+		<!-- Cursor Personalizado -->
+		<div class="cursor-dot" data-cursor-dot></div>
+		<div class="cursor-outline" data-cursor-outline></div>
+
+		<div id="header-container"></div>
+
+		<div class="imagem-fundo">
+			<img
+				src="./resources/assets/img/global/bg-lightness-1.webp"
+				alt="Fundo do contato"
+				loading="lazy"
+			/>
+		</div>
+
+		<main class="pagina-contato">
+			<div class="container contato-container">
+				<div class="contato-header">
+					<span class="tag">Pré-Briefing</span>
+					<div class="hero-titulos">
+						<h1>
+							Vamos construir algo <span class="destaque-h1">Incrível?</span>
+						</h1>
+						<p>
+							Preencha o formulário abaixo para me contar um pouco mais sobre o
+							seu negócio e os seus objetivos. Retornarei o mais breve possível.
+						</p>
+					</div>
+				</div>
+
+				<div class="q-group">
+					<form
+						id="form-contato"
+						action="#"
+						method="POST"
+						class="formulario-briefing"
+					>
+						<div class="two-col">
+							<div class="q-card">
+								<div class="q-label">
+									Nome Completo <span class="required-star">*</span>
+								</div>
+								<input
+									type="text"
+									id="nome"
+									name="nome"
+									placeholder="Como prefere ser chamado?"
+									required
+								/>
+							</div>
+							<div class="q-card">
+								<div class="q-label">Nome da Empresa</div>
+								<input
+									type="text"
+									id="empresa"
+									name="empresa"
+									placeholder="Se houver"
+								/>
+							</div>
+						</div>
+
+						<div class="two-col">
+							<div class="q-card">
+								<div class="q-label">WhatsApp (com DDD)</div>
+								<input
+									type="tel"
+									id="whatsapp"
+									name="whatsapp"
+									inputmode="numeric"
+									maxlength="15"
+									placeholder="(00) 00000-0000"
+								/>
+							</div>
+							<div class="q-card">
+								<div class="q-label">
+									Tamanho da Empresa <span class="required-star">*</span>
+								</div>
+								<select id="funcionarios" name="funcionarios" required>
+									<option value="" disabled selected>
+										Selecione uma opção
+									</option>
+									<option value="Profissional Liberal">
+										Profissional Liberal
+									</option>
+									<option value="Micro (2 a 10 funcionários)">
+										Micro (2 a 10 funcionários)
+									</option>
+									<option value="Média (50 a 100 funcionários)">
+										Média (50 a 100 funcionários)
+									</option>
+									<option value="Grande (mais de 100 funcionários)">
+										Grande (mais de 100 funcionários)
+									</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="two-col">
+							<div class="q-card">
+								<div class="q-label">
+									E-mail <span class="required-star">*</span>
+								</div>
+								<input
+									type="email"
+									id="email"
+									name="email"
+									placeholder="seu@email.com"
+									required
+								/>
+							</div>
+							<div class="q-card">
+								<div class="q-label">
+									Segmento de Atuação <span class="required-star">*</span>
+								</div>
+								<input
+									type="text"
+									id="segmento"
+									name="segmento"
+									placeholder="Ex: Tecnologia, Saúde, Varejo..."
+									required
+								/>
+							</div>
+						</div>
+
+						<div class="q-card">
+							<div class="q-label">
+								Quais produtos ou serviços sua empresa oferece?
+								<span class="required-star">*</span>
+							</div>
+							<input
+								type="text"
+								id="produtos"
+								name="produtos"
+								placeholder="Resuma o que você vende ou faz"
+								required
+							/>
+						</div>
+
+						<div class="two-col">
+							<div class="q-card">
+								<div class="q-label">
+									Qual seu cargo na empresa?
+									<span class="required-star">*</span>
+								</div>
+								<select id="cargo" name="cargo" required>
+									<option value="" disabled selected>
+										Selecione uma opção
+									</option>
+									<option value="Vendedor(a)">Vendedor(a)</option>
+									<option value="Diretor(a)">Diretor(a)</option>
+									<option value="Vice-diretor(a)">Vice-diretor(a)</option>
+									<option value="Não tenho uma empresa">
+										Não tenho uma empresa
+									</option>
+								</select>
+							</div>
+							<div class="q-card">
+								<div class="q-label">
+									Como você me encontrou? <span class="required-star">*</span>
+								</div>
+								<select id="origem" name="origem" required>
+									<option value="" disabled selected>
+										Selecione uma opção
+									</option>
+									<option value="Behance">Behance</option>
+									<option value="Indicação">Indicação</option>
+									<option value="Instagram">Instagram</option>
+									<option value="Outro">Outro</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="q-card">
+							<div class="q-label">
+								Expectativa de Investimento <span class="required-star">*</span>
+							</div>
+							<select id="investimento" name="investimento" required>
+								<option value="" disabled selected>
+									Selecione uma faixa de valor
+								</option>
+								<option value="Menos de R$ 500">Menos de R$ 500</option>
+								<option value="R$ 500 a R$ 1.500">R$ 500 a R$ 1.500</option>
+								<option value="R$ 1.500 a R$ 2.300">R$ 1.500 a R$ 2.300</option>
+								<option value="Acima de R$ 2.300">Acima de R$ 2.300</option>
+								<option value="Ainda não defini o orçamento">
+									Ainda não defini o orçamento
+								</option>
+							</select>
+						</div>
+
+						<div class="q-card checkbox-group">
+							<div class="q-label">
+								Quais serviços você gostaria de adicionar na proposta?
+								<span class="required-star">*</span>
+							</div>
+							<label
+								><input
+									type="checkbox"
+									name="servicos"
+									value="Landing Page (design e/ou implementação)"
+								/>
+								Landing Page (design e/ou implementação)</label
+							>
+							<label
+								><input
+									type="checkbox"
+									name="servicos"
+									value="Site institucional (design e/ou implementação)"
+								/>
+								Site institucional (design e/ou implementação)</label
+							>
+							<label
+								><input
+									type="checkbox"
+									name="servicos"
+									value="Identidade Visual"
+								/>
+								Identidade Visual</label
+							>
+							<label
+								><input type="checkbox" name="servicos" value="Criativos" />
+								Criativos</label
+							>
+							<label
+								><input type="checkbox" name="servicos" value="Social Media" />
+								Social Media</label
+							>
+							<label
+								><input type="checkbox" name="servicos" value="Outros" /> Outros
+								(descrever abaixo)</label
+							>
+						</div>
+
+						<div class="q-card">
+							<div class="q-label">
+								Conte-me mais sobre o projeto
+								<span class="required-star">*</span>
+							</div>
+							<textarea
+								id="projeto"
+								name="projeto"
+								rows="5"
+								placeholder="Qual o principal problema que você quer resolver com esse projeto? Quais são suas expectativas?"
+								required
+							></textarea>
+						</div>
+
+						<div class="q-card">
+							<button type="submit" class="btn btn-submit">
+								Enviar mensagem e iniciar conversa
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+
+		<div id="footer-container"></div>
+
+		<!-- Scripts -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+		<script src="./resources/js/components/header-footer.js"></script>
+		<script src="./resources/js/components/cta-principal.js" defer></script>
+
+		<script src="./resources/js/components/nav.js"></script>
+
+		<script src="./resources/js/components/cursor.js" defer></script>
+		<script src="./resources/js/contato/animacoes-contato.js" defer></script>
+
+		<script src="./resources/js/contato/config.js"></script>
+		<script src="./resources/js/contato/formulario.js" defer></script>
+		<script src="./resources/js/contato/storage.js" defer></script>
+
+		<script src="./resources/js/components/transicao.js" defer></script>
+	</body>
+</html>

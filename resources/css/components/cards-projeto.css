@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+/* =========================================
+   COMPONENTE: CARD DE PROJETO
+   Usado na Home (Carrossel) e no Portfólio (Grid)
+   ========================================= */
+
+/* Reset de link: os cards são elementos <a> */
+.card-projeto {
+	position: relative;
+	flex: 0 0 400px; /* Tamanho padrão base (adaptado nos layouts pai, como o Grid) */
+	height: 430px;
+	border-radius: var(--radius-md); /* Atualizado para Token Semântico */
+	overflow: hidden;
+	scroll-snap-align: start;
+	transition:
+		opacity 0.4s ease,
+		transform 0.4s ease;
+	background-color: var(
+		--surface-1
+	); /* Atualizado para Token Semântico (Fundo de elemento) */
+	/* Reset de <a> */
+	color: inherit;
+	text-decoration: none;
+	display: block;
+	cursor: pointer;
+}
+
+.card-projeto:hover {
+	opacity: 1; /* Sobrescreve o opacity:0.8 do a:hover global */
+	transform: translateY(-6px);
+}
+
+/* Classe utilitária para os Filtros do JS */
+.card-projeto.oculto {
+	display: none;
+}
+
+.projeto-bg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Degradê preto embaixo para o texto branco ficar legível sempre */
+.projeto-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 60%;
+	background: linear-gradient(
+		to top,
+		rgba(0, 0, 0, 0.9) 0%,
+		rgba(0, 0, 0, 0) 100%
+	);
+}
+
+.projeto-info {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 32px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	color: #ffffff; /* Fixo, pois o overlay é sempre escuro */
+}
+
+.projeto-textos {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	width: 100%;
+}
+
+.projeto-info h3 {
+	color: var(--text-primary); /* Atualizado para Token Semântico */
+	font-size: 1.3rem;
+}
+
+.projeto-info p {
+	color: var(--text-secondary); /* Atualizado para Token Semântico */
+	font-size: 0.9rem;
+}
+
+/* Tags dentro do Card */
+.projeto-tags {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+	margin-top: 8px;
+}
+
+.projeto-tags span {
+	background: rgba(255, 255, 255, 0.1);
+	padding: 4px 12px;
+	border-radius: var(--radius-pill); /* Atualizado para Token Semântico */
+	font-size: 0.75rem;
+	backdrop-filter: blur(4px);
+	border: 1px solid var(--border-subtle); /* Atualizado para Token Semântico */
+}
+
+/* Responsividade Base do Card */
+@media (max-width: 992px) {
+	.card-projeto {
+		flex: 0 0 350px;
+		height: 400px;
+	}
+}
+
+@media (max-width: 768px) {
+	.card-projeto {
+		flex: 0 0 clamp(280px, 80vw, 320px);
+		height: 380px;
+	}
+
+	.projeto-info {
+		padding: 24px;
+	}
+
+	.projeto-info h3 {
+		font-size: 1.25rem;
+	}
+}

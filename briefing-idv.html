@@ -1,0 +1,1216 @@
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Briefing Identidade Visual | Luiz Ramos</title>
+
+		<!-- SEO -->
+		<meta
+			name="description"
+			content="Preencha o briefing de identidade visual para iniciar seu projeto de branding com o designer Luiz Ramos."
+		/>
+		<meta name="author" content="Luiz Ramos" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://luizramos.com.br/briefing-idv.html" />
+		<meta property="og:title" content="Briefing Identidade Visual | Luiz Ramos" />
+		<meta
+			property="og:description"
+			content="Preencha o briefing de identidade visual para iniciar seu projeto de branding com o designer Luiz Ramos."
+		/>
+		<meta
+			property="og:image"
+			content="https://luizramos.com.br/resources/assets/img/global/thumb-compartilhamento.webp"
+		/>
+		<link rel="canonical" href="https://luizramos.com.br/briefing-idv.html" />
+		<link
+			rel="shortcut icon"
+			href="./resources/assets/icons/global/logo.svg"
+			type="image/svg+xml"
+		/>
+
+		<!-- Otimização -->
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<!-- Fontes -->
+		<link
+			rel="preload"
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+			as="style"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- CSS Global -->
+		<link rel="stylesheet" href="./resources/css/global/style.css" />
+		<link rel="stylesheet" href="./resources/css/global/fontes.css" />
+		<link rel="stylesheet" href="./resources/css/global/tokens.css" />
+
+		<!-- CSS Components -->
+		<link rel="stylesheet" href="./resources/css/components/cursor.css" />
+
+		<link rel="stylesheet" href="./resources/css/components/briefing-nav.css" />
+		<link
+			rel="stylesheet"
+			href="./resources/css/pages/briefing/briefing-container.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./resources/css/pages/briefing/briefing-layout.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./resources/css/pages/briefing/briefing-form.css"
+		/>
+
+		<!-- CSS Components | Transição -->
+		<link rel="stylesheet" href="./resources/css/components/transicao.css" />
+	</head>
+	<body>
+		<!-- Tela de Transição -->
+		<div class="transicao-overlay ini-revelando ativo" id="transicao-overlay">
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+		</div>
+
+		<!-- Cursor Personalizado -->
+		<div class="cursor-dot" data-cursor-dot></div>
+		<div class="cursor-outline" data-cursor-outline></div>
+
+		<header class="site-header">
+			<div class="logo">Briefing<span>.</span></div>
+
+			<div class="progress-wrap">
+				<div class="progress-steps" id="progress-steps">
+					<div class="step-tab active" data-step="0">
+						<span class="num">1</span>Contexto
+					</div>
+					<div class="step-tab" data-step="1">
+						<span class="num">2</span>Negócio
+					</div>
+					<div class="step-tab" data-step="2">
+						<span class="num">3</span>Posicionamento
+					</div>
+					<div class="step-tab" data-step="3">
+						<span class="num">4</span>Público
+					</div>
+					<div class="step-tab" data-step="4">
+						<span class="num">5</span>Estética
+					</div>
+					<div class="step-tab" data-step="5">
+						<span class="num">6</span>Referências
+					</div>
+					<div class="step-tab" data-step="6">
+						<span class="num">7</span>Resumo
+					</div>
+				</div>
+			</div>
+
+			<div class="header-meta" id="header-progress">Etapa 1 de 7</div>
+		</header>
+
+		<div class="imagem-fundo">
+			<img
+				src="./resources/assets/img/global/bg-lightness-1.webp"
+				alt="Fundo do contato"
+				loading="lazy"
+			/>
+		</div>
+
+		<main class="pagina-contato">
+			<div class="container briefing-container">
+				<!-- ═══════════════════════════════════════════
+					STEP 1 · CONTEXTO
+					═══════════════════════════════════════════ -->
+				<div class="step-section active" id="step-0">
+					<div class="section-intro">
+						<div class="tag">Etapa 1 · Contexto</div>
+						<div class="section-text">
+							<h1 class="section-title">Te conhecendo melhor</h1>
+							<p class="section-desc">
+								Vamos começar pelo básico. Essas informações formam a espinha
+								dorsal do briefing.
+							</p>
+						</div>
+					</div>
+					<div class="q-group">
+						<div class="q-group-label">Identificação</div>
+						<div class="two-col">
+							<div class="q-card">
+								<div class="q-label">
+									Nome completo ou razão social
+									<span class="required-star">*</span>
+								</div>
+								<input
+									type="text"
+									id="nome"
+									placeholder="Ex: Studio Arquitetura Ltda."
+								/>
+							</div>
+							<div class="q-card">
+								<div class="q-label">Nome fantasia / marca</div>
+								<input type="text" id="fantasia" placeholder="Ex: Studio A" />
+							</div>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								Segmento / área de atuação <span class="required-star">*</span>
+							</div>
+							<div class="q-hint">
+								Ex: arquitetura, saúde, moda, tecnologia, gastronomia…
+							</div>
+							<input
+								type="text"
+								id="segmento"
+								placeholder="Descreva o segmento"
+							/>
+						</div>
+						<div class="q-card">
+							<div class="q-label">Há quanto tempo existe este negócio?</div>
+							<div class="chip-grid" id="chips-tempo">
+								<div class="chip" data-group="tempo">
+									Ainda não existe (estou abrindo)
+								</div>
+								<div class="chip" data-group="tempo">Menos de 1 ano</div>
+								<div class="chip" data-group="tempo">1 a 3 anos</div>
+								<div class="chip" data-group="tempo">3 a 10 anos</div>
+								<div class="chip" data-group="tempo">Mais de 10 anos</div>
+							</div>
+						</div>
+						<div class="q-card">
+							<div class="q-label">Qual o tamanho atual da empresa?</div>
+							<div class="chip-grid" id="chips-tamanho">
+								<div class="chip" data-group="tamanho">Somente eu (solo)</div>
+								<div class="chip" data-group="tamanho">2 a 5 pessoas</div>
+								<div class="chip" data-group="tamanho">6 a 20 pessoas</div>
+								<div class="chip" data-group="tamanho">20 a 100 pessoas</div>
+								<div class="chip" data-group="tamanho">Mais de 100 pessoas</div>
+							</div>
+						</div>
+					</div>
+					<div class="q-group">
+						<div class="q-group-label">Motivação do projeto</div>
+						<div class="q-card">
+							<div class="q-label">
+								Por que você quer uma identidade visual agora?
+								<span class="required-star">*</span>
+							</div>
+							<div class="chip-grid" id="chips-motivo">
+								<div class="chip" data-group="motivo">
+									Nunca tive — estou começando do zero
+								</div>
+								<div class="chip" data-group="motivo">
+									Minha marca está desatualizada
+								</div>
+								<div class="chip" data-group="motivo">
+									Passei por reposicionamento
+								</div>
+								<div class="chip" data-group="motivo">
+									Fusão, aquisição ou mudança de nome
+								</div>
+								<div class="chip" data-group="motivo">
+									Vou expandir para novos mercados
+								</div>
+								<div class="chip" data-group="motivo">
+									A marca não reflete mais o que entrego
+								</div>
+							</div>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								O que o projeto de identidade precisa entregar? (marque tudo que
+								se aplica)
+							</div>
+							<div class="chip-grid" id="chips-entrega">
+								<div class="chip" data-group="entrega" data-multi>
+									Logotipo / símbolo
+								</div>
+								<div class="chip" data-group="entrega" data-multi>
+									Paleta de cores
+								</div>
+								<div class="chip" data-group="entrega" data-multi>
+									Tipografia
+								</div>
+								<div class="chip" data-group="entrega" data-multi>
+									Papelaria (cartão, papel timbrado)
+								</div>
+								<div class="chip" data-group="entrega" data-multi>
+									Manual de marca
+								</div>
+								<div class="chip" data-group="entrega" data-multi>
+									Templates de redes sociais
+								</div>
+								<div class="chip" data-group="entrega" data-multi>
+									Embalagem / rótulo
+								</div>
+								<div class="chip" data-group="entrega" data-multi>
+									Sinalização / fachada
+								</div>
+								<div class="chip" data-group="entrega" data-multi>
+									Apresentações corporativas
+								</div>
+							</div>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								Existe prazo definido para este projeto?
+							</div>
+							<div class="two-col">
+								<select id="prazo">
+									<option value="">— Selecionar —</option>
+									<option>Sem prazo definido</option>
+									<option>Até 2 semanas</option>
+									<option>Até 1 mês</option>
+									<option>1 a 3 meses</option>
+									<option>Mais de 3 meses</option>
+								</select>
+								<input
+									type="text"
+									id="prazo-obs"
+									placeholder="Observações sobre o prazo (opcional)"
+								/>
+							</div>
+						</div>
+					</div>
+					<div class="nav-buttons">
+						<span></span>
+						<button class="btn btn-primary" data-goto="1">
+							Próximo
+							<img
+								src="./resources/assets/icons/global/icone-nav-next.svg"
+								alt="seta para direita"
+							/>
+						</button>
+					</div>
+				</div>
+				<!-- ═══════════════════════════════════════════
+					STEP 2 · NEGÓCIO
+					═══════════════════════════════════════════ -->
+				<div class="step-section" id="step-1">
+					<div class="section-intro">
+						<div class="tag">Etapa 2 · Negócio</div>
+						<div class="section-text">
+							<h1 class="section-title">O que você faz e como faz?</h1>
+							<p class="section-desc">
+								Entender o negócio é entender o que a marca precisa comunicar.
+							</p>
+						</div>
+					</div>
+					<div class="tip-box">
+						💡 Responda como se estivesse explicando para alguém de fora do seu
+						setor. Quanto mais detalhe, melhor o resultado.
+					</div>
+					<div class="q-group">
+						<div class="q-group-label">Essência do negócio</div>
+						<div class="q-card">
+							<div class="q-label">
+								Em uma frase, o que você entrega para seus clientes?
+								<span class="required-star">*</span>
+							</div>
+							<div class="q-hint">
+								Tente responder no formato: "Ajudo [quem] a [atingir o quê] por
+								meio de [como]."
+							</div>
+							<textarea
+								id="essencia"
+								placeholder="Ex: Ajudo arquitetos independentes a ganhar autoridade digital por meio de conteúdo estratégico…"
+							></textarea>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								Qual é o principal produto ou serviço que gera receita?
+							</div>
+							<textarea
+								id="principal-produto"
+								style="min-height: 70px"
+								placeholder="Descreva o carro-chefe do seu negócio…"
+							></textarea>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								Qual é o processo / método que você usa para entregar resultado?
+							</div>
+							<div class="q-hint">
+								Etapas, rituais, diferenciais operacionais. O que acontece desde
+								a contratação até o resultado final?
+							</div>
+							<textarea
+								id="processo"
+								placeholder="Descreva o passo a passo…"
+							></textarea>
+						</div>
+					</div>
+					<div class="q-group">
+						<div class="q-group-label">Concorrência e mercado</div>
+						<div class="q-card">
+							<div class="q-label">
+								Cite 2 a 5 concorrentes diretos (ou marcas que disputam o mesmo
+								cliente)
+							</div>
+							<textarea
+								id="concorrentes"
+								style="min-height: 70px"
+								placeholder="Nome, site ou redes sociais…"
+							></textarea>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								O que você faz diferente ou melhor do que eles?
+							</div>
+							<div class="q-hint">
+								Não seja modesto. Isso é o que a identidade visual vai
+								amplificar.
+							</div>
+							<textarea
+								id="diferencial"
+								placeholder="Liste seus diferenciais reais…"
+							></textarea>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								Há alguma marca (dentro ou fora do seu setor) que você admira?
+								Por quê?
+							</div>
+							<div class="q-hint">
+								Não precisa ser referência direta — pode ser um posicionamento,
+								uma atitude de marca.
+							</div>
+							<textarea
+								id="admira"
+								style="min-height: 70px"
+								placeholder="Ex: Admiro a Apple pela simplicidade que comunica sofisticação…"
+							></textarea>
+						</div>
+					</div>
+					<div class="q-group">
+						<div class="q-group-label">Contexto de uso da marca</div>
+						<div class="q-card">
+							<div class="q-label">
+								Em quais canais / suportes a identidade vai ser usada? (marque
+								todos)
+							</div>
+							<div class="chip-grid" id="chips-canais">
+								<div class="chip" data-group="canais" data-multi>
+									Instagram / TikTok
+								</div>
+								<div class="chip" data-group="canais" data-multi>LinkedIn</div>
+								<div class="chip" data-group="canais" data-multi>Website</div>
+								<div class="chip" data-group="canais" data-multi>
+									WhatsApp / grupos
+								</div>
+								<div class="chip" data-group="canais" data-multi>
+									E-mail marketing
+								</div>
+								<div class="chip" data-group="canais" data-multi>
+									Cartão de visita
+								</div>
+								<div class="chip" data-group="canais" data-multi>
+									Uniforme / etiqueta
+								</div>
+								<div class="chip" data-group="canais" data-multi>Embalagem</div>
+								<div class="chip" data-group="canais" data-multi>
+									Outdoor / fachada
+								</div>
+								<div class="chip" data-group="canais" data-multi>
+									Apresentações / pitch
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="nav-buttons">
+						<button class="btn btn-ghost" data-goto="0">
+							<img
+								src="./resources/assets/icons/global/icone-nav-prev.svg"
+								alt="seta para esquerda"
+							/>Anterior
+						</button>
+						<button class="btn btn-primary" data-goto="2">
+							Próximo
+							<img
+								src="./resources/assets/icons/global/icone-nav-next.svg"
+								alt="seta para direita"
+							/>
+						</button>
+					</div>
+				</div>
+				<!-- ═══════════════════════════════════════════
+					STEP 3 · POSICIONAMENTO
+					═══════════════════════════════════════════ -->
+				<div class="step-section" id="step-2">
+					<div class="section-intro">
+						<div class="tag">Etapa 3 · Posicionamento</div>
+						<div class="section-text">
+							<h1 class="section-title">Onde você quer estar?</h1>
+							<p class="section-desc">
+								Posicionamento é a promessa que a marca carrega. Vamos mapeá-la
+								com precisão.
+							</p>
+						</div>
+					</div>
+					<div class="q-group">
+						<div class="q-group-label">Propósito e valores</div>
+						<div class="q-card">
+							<div class="q-label">
+								Por que este negócio existe além do lucro?
+								<span class="required-star">*</span>
+							</div>
+							<div class="q-hint">
+								Propósito não é missão corporativa. É a resposta honesta para
+								"por que isso importa?"
+							</div>
+							<textarea
+								id="proposito"
+								placeholder="O que move você além do resultado financeiro?"
+							></textarea>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								Quais são os 3 a 5 valores inegociáveis da sua marca?
+							</div>
+							<div class="chip-grid" id="chips-valores">
+								<div class="chip" data-group="valores" data-multi>
+									Transparência
+								</div>
+								<div class="chip" data-group="valores" data-multi>Inovação</div>
+								<div class="chip" data-group="valores" data-multi>
+									Excelência técnica
+								</div>
+								<div class="chip" data-group="valores" data-multi>
+									Acolhimento
+								</div>
+								<div class="chip" data-group="valores" data-multi>
+									Sustentabilidade
+								</div>
+								<div class="chip" data-group="valores" data-multi>
+									Resultado
+								</div>
+								<div class="chip" data-group="valores" data-multi>Tradição</div>
+								<div class="chip" data-group="valores" data-multi>Ousadia</div>
+								<div class="chip" data-group="valores" data-multi>
+									Simplicidade
+								</div>
+								<div class="chip" data-group="valores" data-multi>
+									Comunidade
+								</div>
+								<div class="chip" data-group="valores" data-multi>
+									Autonomia
+								</div>
+								<div class="chip" data-group="valores" data-multi>Rigor</div>
+							</div>
+							<div style="margin-top: 10px">
+								<input
+									type="text"
+									id="valores-outros"
+									placeholder="Outros valores (separe por vírgula)…"
+								/>
+							</div>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								Se a sua marca fosse uma pessoa, como ela seria?
+							</div>
+							<div class="q-hint">
+								Pense em personalidade, jeito de se comunicar, estilo de vida,
+								postura.
+							</div>
+							<textarea
+								id="persona-marca"
+								placeholder="Ex: Uma mulher de 40 anos, direta, elegante, que usa frases curtas e nunca promete o que não pode cumprir…"
+							></textarea>
+						</div>
+					</div>
+					<div class="q-group">
+						<div class="q-group-label">Tom e personalidade</div>
+						<div class="q-card">
+							<div class="q-label">
+								Como sua marca se comunica? (marque todos que fazem sentido)
+							</div>
+							<div class="chip-grid" id="chips-tom">
+								<div class="chip" data-group="tom" data-multi>
+									Formal e técnica
+								</div>
+								<div class="chip" data-group="tom" data-multi>
+									Próxima e descontraída
+								</div>
+								<div class="chip" data-group="tom" data-multi>
+									Inspiradora e motivacional
+								</div>
+								<div class="chip" data-group="tom" data-multi>
+									Educativa e instrutiva
+								</div>
+								<div class="chip" data-group="tom" data-multi>
+									Provocadora e questionadora
+								</div>
+								<div class="chip" data-group="tom" data-multi>
+									Séria e institucional
+								</div>
+								<div class="chip" data-group="tom" data-multi>
+									Bem-humorada e leve
+								</div>
+								<div class="chip" data-group="tom" data-multi>
+									Premium e exclusiva
+								</div>
+								<div class="chip" data-group="tom" data-multi>
+									Acolhedora e empática
+								</div>
+							</div>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								Ajuste os eixos de personalidade da marca
+							</div>
+							<div class="q-hint">
+								Arraste o controle para onde sua marca se posiciona
+								naturalmente.
+							</div>
+							<div>
+								<div class="polar-pair">
+									<div class="polar-label">Tradicional</div>
+									<input
+										type="range"
+										class="polar-slider"
+										min="0"
+										max="100"
+										value="50"
+										id="polar-trad"
+									/>
+									<div class="polar-label right">Inovadora</div>
+								</div>
+								<div class="polar-pair">
+									<div class="polar-label">Séria</div>
+									<input
+										type="range"
+										class="polar-slider"
+										min="0"
+										max="100"
+										value="50"
+										id="polar-seria"
+									/>
+									<div class="polar-label right">Divertida</div>
+								</div>
+								<div class="polar-pair">
+									<div class="polar-label">Acessível</div>
+									<input
+										type="range"
+										class="polar-slider"
+										min="0"
+										max="100"
+										value="50"
+										id="polar-preco"
+									/>
+									<div class="polar-label right">Premium</div>
+								</div>
+								<div class="polar-pair">
+									<div class="polar-label">Minimalista</div>
+									<input
+										type="range"
+										class="polar-slider"
+										min="0"
+										max="100"
+										value="50"
+										id="polar-visual"
+									/>
+									<div class="polar-label right">Expressiva</div>
+								</div>
+								<div class="polar-pair">
+									<div class="polar-label">Local / regional</div>
+									<input
+										type="range"
+										class="polar-slider"
+										min="0"
+										max="100"
+										value="50"
+										id="polar-escala"
+									/>
+									<div class="polar-label right">Global</div>
+								</div>
+								<div class="polar-pair">
+									<div class="polar-label">Racional</div>
+									<input
+										type="range"
+										class="polar-slider"
+										min="0"
+										max="100"
+										value="50"
+										id="polar-emocao"
+									/>
+									<div class="polar-label right">Emocional</div>
+								</div>
+							</div>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								Existe algo que sua marca NUNCA deve parecer ou comunicar?
+							</div>
+							<div class="q-hint">
+								Restrições são tão importantes quanto diretrizes. "Nunca deve
+								parecer barato, descuidado, agressivo…"
+							</div>
+							<textarea
+								id="nunca"
+								style="min-height: 70px"
+								placeholder="Descreva o que deve ser evitado…"
+							></textarea>
+						</div>
+					</div>
+					<div class="nav-buttons">
+						<button class="btn btn-ghost" data-goto="1">
+							<img
+								src="./resources/assets/icons/global/icone-nav-prev.svg"
+								alt="seta para esquerda"
+							/>
+							Anterior
+						</button>
+						<button class="btn btn-primary" data-goto="3">
+							Próximo
+							<img
+								src="./resources/assets/icons/global/icone-nav-next.svg"
+								alt="seta diagonal"
+							/>
+						</button>
+					</div>
+				</div>
+				<!-- ═══════════════════════════════════════════
+					STEP 4 · PÚBLICO
+					═══════════════════════════════════════════ -->
+				<div class="step-section" id="step-3">
+					<div class="section-intro">
+						<div class="tag">Etapa 4 · Público</div>
+						<div class="section-text">
+							<h1 class="section-title">Para quem você fala?</h1>
+							<p class="section-desc">
+								Entender quem recebe a marca é entender que linguagem ela deve
+								usar.
+							</p>
+						</div>
+					</div>
+					<div class="q-group">
+						<div class="q-group-label">Perfil do cliente ideal</div>
+						<div class="q-card">
+							<div class="q-label">
+								Descreva o seu cliente ideal em detalhe
+								<span class="required-star">*</span>
+							</div>
+							<div class="q-hint">
+								Idade, gênero, profissão, renda estimada, estilo de vida, onde
+								mora, o que consome.
+							</div>
+							<textarea
+								id="cliente-ideal"
+								placeholder="Ex: Mulher, 28 a 42 anos, moradora de capital, profissional liberal ou empresária, preocupada com saúde mas sem tempo…"
+							></textarea>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								Qual é o maior problema / dor que esse cliente tem — que você
+								resolve?
+							</div>
+							<textarea
+								id="dor-cliente"
+								placeholder="Pense na dor emocional, não só na técnica…"
+							></textarea>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								Qual é o desejo mais profundo desse cliente?
+							</div>
+							<div class="q-hint">
+								Além de "quero X produto" — o que eles realmente querem
+								alcançar, sentir ou ser?
+							</div>
+							<textarea
+								id="desejo-cliente"
+								placeholder="Ex: Querem ser vistos como modernos, querem paz de espírito, querem status…"
+							></textarea>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								O que faz esse cliente escolher você e não o concorrente?
+							</div>
+							<textarea
+								id="razao-escolha"
+								style="min-height: 70px"
+								placeholder="Motivo real da compra…"
+							></textarea>
+						</div>
+					</div>
+					<div class="q-group">
+						<div class="q-group-label">Experiência e percepção</div>
+						<div class="q-card">
+							<div class="q-label">
+								Como você quer que o cliente se sinta ao ver sua marca pela
+								primeira vez?
+							</div>
+							<div class="chip-grid" id="chips-sensacao">
+								<div class="chip" data-group="sensacao" data-multi>
+									Confiança
+								</div>
+								<div class="chip" data-group="sensacao" data-multi>
+									Curiosidade
+								</div>
+								<div class="chip" data-group="sensacao" data-multi>
+									Aspiração / desejo
+								</div>
+								<div class="chip" data-group="sensacao" data-multi>
+									Acolhimento / segurança
+								</div>
+								<div class="chip" data-group="sensacao" data-multi>
+									Sofisticação / exclusividade
+								</div>
+								<div class="chip" data-group="sensacao" data-multi>
+									Alegria / leveza
+								</div>
+								<div class="chip" data-group="sensacao" data-multi>
+									Credibilidade / seriedade
+								</div>
+								<div class="chip" data-group="sensacao" data-multi>
+									Proximidade / humanidade
+								</div>
+								<div class="chip" data-group="sensacao" data-multi>
+									Energia / movimento
+								</div>
+							</div>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								Existe um cliente ou projeto que representa o melhor do que você
+								faz?
+							</div>
+							<div class="q-hint">
+								Não precisa citar nomes. Descreva o caso, o resultado, o que
+								tornou especial.
+							</div>
+							<textarea
+								id="melhor-caso"
+								placeholder="Descreva um caso de sucesso…"
+							></textarea>
+						</div>
+					</div>
+					<div class="nav-buttons">
+						<button class="btn btn-ghost" data-goto="2">
+							<img
+								src="./resources/assets/icons/global/icone-nav-prev.svg"
+								alt="seta para esquerda"
+							/>
+							Anterior
+						</button>
+						<button class="btn btn-primary" data-goto="4">
+							Próximo
+							<img
+								src="./resources/assets/icons/global/icone-nav-next.svg"
+								alt="seta para direita"
+							/>
+						</button>
+					</div>
+				</div>
+				<!-- ═══════════════════════════════════════════
+					STEP 5 · ESTÉTICA
+					═══════════════════════════════════════════ -->
+				<div class="step-section" id="step-4">
+					<div class="section-intro">
+						<div class="tag">Etapa 5 · Estética</div>
+						<div class="section-text">
+							<h1 class="section-title">Como ela deve parecer?</h1>
+							<p class="section-desc">
+								Direcionamentos visuais que guiam as decisões de design.
+							</p>
+						</div>
+					</div>
+					<div class="q-group">
+						<div class="q-group-label">Cores</div>
+						<div class="q-card">
+							<div class="q-label">
+								Você já tem alguma cor associada à marca atualmente?
+							</div>
+							<div class="chip-grid" id="chips-cor-atual">
+								<div class="chip" data-group="cor-atual">
+									Não tenho / é novo
+								</div>
+								<div class="chip" data-group="cor-atual">
+									Sim, quero mantê-la
+								</div>
+								<div class="chip" data-group="cor-atual">
+									Sim, mas quero mudar
+								</div>
+								<div class="chip" data-group="cor-atual">
+									Sim, quero evoluir levemente
+								</div>
+							</div>
+							<div style="margin-top: 10px">
+								<input
+									type="text"
+									id="cor-atual-hex"
+									placeholder="Se tiver, informe as cores atuais (nome, hex ou referência)…"
+								/>
+							</div>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								Que famílias de cor você sente afinidade para a nova marca?
+							</div>
+							<div class="chip-grid" id="chips-cor-familia">
+								<div class="chip" data-group="cor-familia" data-multi>
+									Terrosos / neutros
+								</div>
+								<div class="chip" data-group="cor-familia" data-multi>
+									Escuros / dramáticos
+								</div>
+								<div class="chip" data-group="cor-familia" data-multi>
+									Claros / clean
+								</div>
+								<div class="chip" data-group="cor-familia" data-multi>
+									Vibrantes / saturados
+								</div>
+								<div class="chip" data-group="cor-familia" data-multi>
+									Pastéis / suaves
+								</div>
+								<div class="chip" data-group="cor-familia" data-multi>
+									Preto e branco
+								</div>
+								<div class="chip" data-group="cor-familia" data-multi>
+									Metálicos / dourado / prata
+								</div>
+							</div>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								Existe alguma cor que sua marca NUNCA deve usar?
+							</div>
+							<input
+								type="text"
+								id="cor-proibida"
+								placeholder="Ex: vermelho forte, amarelo, laranja…"
+							/>
+						</div>
+					</div>
+					<div class="q-group">
+						<div class="q-group-label">Tipografia e forma</div>
+						<div class="q-card">
+							<div class="q-label">
+								Que estilo tipográfico você prefere para a marca?
+							</div>
+							<div class="chip-grid" id="chips-tipo">
+								<div class="chip" data-group="tipo">
+									Serifado clássico (elegante, sólido)
+								</div>
+								<div class="chip" data-group="tipo">
+									Sem serifa moderno (limpo, atual)
+								</div>
+								<div class="chip" data-group="tipo">
+									Manuscrito / escrito à mão (pessoal, artesanal)
+								</div>
+								<div class="chip" data-group="tipo">
+									Display / expressivo (ousado, marcante)
+								</div>
+								<div class="chip" data-group="tipo">
+									Geométrico / técnico (preciso, inovador)
+								</div>
+								<div class="chip" data-group="tipo">Não tenho preferência</div>
+							</div>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								Como você prefere as formas e o estilo visual geral?
+							</div>
+							<div class="chip-grid" id="chips-forma">
+								<div class="chip" data-group="forma" data-multi>
+									Geométrico / preciso
+								</div>
+								<div class="chip" data-group="forma" data-multi>
+									Orgânico / fluido
+								</div>
+								<div class="chip" data-group="forma" data-multi>
+									Minimalista / clean
+								</div>
+								<div class="chip" data-group="forma" data-multi>
+									Detalhado / ornamental
+								</div>
+								<div class="chip" data-group="forma" data-multi>
+									Assimétrico / dinâmico
+								</div>
+								<div class="chip" data-group="forma" data-multi>
+									Simétrico / equilibrado
+								</div>
+								<div class="chip" data-group="forma" data-multi>
+									Icônico / simbólico
+								</div>
+								<div class="chip" data-group="forma" data-multi>
+									Textural / artesanal
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="q-group">
+						<div class="q-group-label">Repertório visual</div>
+						<div class="q-card">
+							<div class="q-label">
+								Se sua marca fosse um objeto do mundo físico, qual seria?
+							</div>
+							<div class="q-hint">
+								Ex: Um relógio de precisão suíço. Uma mesa de madeira maciça.
+								Uma tela de linho em branco.
+							</div>
+							<textarea
+								id="objeto"
+								style="min-height: 70px"
+								placeholder="Descreva o objeto e por que ele representa sua marca…"
+							></textarea>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								Se sua marca fosse um ambiente / espaço, como seria?
+							</div>
+							<div class="q-hint">
+								Ex: Uma galeria de arte branca com pé-direito alto. Um ateliê em
+								loft industrial. Uma cabana de madeira na floresta.
+							</div>
+							<textarea
+								id="ambiente"
+								style="min-height: 70px"
+								placeholder="Descreva o espaço…"
+							></textarea>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								Há algum elemento visual, símbolo, ícone ou imagem que remeta ao
+								coração do seu negócio?
+							</div>
+							<div class="q-hint">
+								Pode ser abstrato — uma sensação, uma textura, um movimento.
+							</div>
+							<textarea
+								id="simbolo"
+								style="min-height: 70px"
+								placeholder="Ex: Movimento de água, detalhe cirúrgico, arco arquitetônico, semente que germina…"
+							></textarea>
+						</div>
+					</div>
+					<div class="nav-buttons">
+						<button class="btn btn-ghost" data-goto="3">
+							<img
+								src="./resources/assets/icons/global/icone-nav-prev.svg"
+								alt="seta para esquerda"
+							/>
+							Anterior
+						</button>
+						<button class="btn btn-primary" data-goto="5">
+							Próximo
+							<img
+								src="./resources/assets/icons/global/icone-nav-next.svg"
+								alt="seta para direita"
+							/>
+						</button>
+					</div>
+				</div>
+				<!-- ═══════════════════════════════════════════
+					STEP 6 · REFERÊNCIAS
+					═══════════════════════════════════════════ -->
+				<div class="step-section" id="step-5">
+					<div class="section-intro">
+						<div class="tag">Etapa 6 · Referências</div>
+						<div class="section-text">
+							<h1 class="section-title">O que te inspira?</h1>
+							<p class="section-desc">
+								Referências não definem o resultado — elas afiam a comunicação
+								entre você e o designer.
+							</p>
+						</div>
+					</div>
+					<div class="tip-box">
+						📌 Não precisa ser do seu setor. Pinterest, Instagram, sites, fotos,
+						marcas que você admira — tudo vale.
+					</div>
+					<div class="q-group">
+						<div class="q-group-label">Upload de imagens e arquivos</div>
+						<div
+							class="upload-area"
+							id="upload-area"
+							onclick="document.getElementById('file-input').click()"
+						>
+							<div class="upload-icon">🖼</div>
+							<div class="upload-text">
+								Clique para enviar ou arraste seus arquivos aqui
+							</div>
+							<div class="upload-sub">
+								PNG, JPG, PDF, SVG — até 20 MB por arquivo
+							</div>
+						</div>
+						<input
+							type="file"
+							id="file-input"
+							multiple
+							accept="image/*,.pdf,.svg"
+							onchange="handleFiles(this.files)"
+						/>
+						<div class="file-preview-grid" id="file-preview"></div>
+						<div id="file-docs"></div>
+					</div>
+					<div class="q-group">
+						<div class="q-group-label">Links e referências online</div>
+						<div class="q-card">
+							<div class="q-label">
+								Links de referência (Behance, Pinterest, Instagram, sites)
+							</div>
+							<div class="q-hint">Cole um link por linha.</div>
+							<textarea
+								id="links-ref"
+								placeholder="https://www.behance.net/...&#10;https://www.pinterest.com/...&#10;https://www.instagram.com/..."
+							></textarea>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								Links de marcas concorrentes ou do setor que você acha
+								interessantes visualmente
+							</div>
+							<textarea
+								id="links-concorr"
+								style="min-height: 70px"
+								placeholder="https://..."
+							></textarea>
+						</div>
+					</div>
+					<div class="q-group">
+						<div class="q-group-label">Direcionamento final</div>
+						<div class="q-card">
+							<div class="q-label">
+								O que une as referências que você enviou? Qual o fio condutor
+								estético?
+							</div>
+							<div class="q-hint">
+								Mesmo que seja intuitivo — "todas são limpas", "todas usam muito
+								branco", "todas têm peso".
+							</div>
+							<textarea
+								id="fio-condutor"
+								placeholder="Descreva o padrão estético que você percebe nas suas referências…"
+							></textarea>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								Há algo que você viu nas referências que NÃO quer ver na sua
+								marca?
+							</div>
+							<textarea
+								id="nao-quero"
+								style="min-height: 70px"
+								placeholder="Ex: Não quero o excesso de ícones, não quero gradientes, não quero parecer app de fintech…"
+							></textarea>
+						</div>
+						<div class="q-card">
+							<div class="q-label">
+								Informações adicionais ou contexto que o designer precisa saber
+							</div>
+							<textarea
+								id="extras"
+								placeholder="Qualquer coisa relevante que não foi perguntada…"
+							></textarea>
+						</div>
+					</div>
+					<div class="nav-buttons">
+						<button class="btn btn-ghost" data-goto="4">
+							<img
+								src="./resources/assets/icons/global/icone-nav-prev.svg"
+								alt="seta para esquerda"
+							/>
+							Anterior
+						</button>
+						<button
+							class="btn btn-primary"
+							data-goto="6"
+							data-build-summary
+						>
+							Ver resumo
+							<img
+								src="./resources/assets/icons/global/icone-nav-next.svg"
+								alt="seta para direita"
+							/>
+						</button>
+					</div>
+				</div>
+				<!-- ═══════════════════════════════════════════
+					STEP 7 · RESUMO
+					═══════════════════════════════════════════ -->
+				<div class="step-section" id="step-6">
+					<div class="section-intro">
+						<div class="tag">Etapa 7 · Resumo</div>
+						<div class="section-text">
+							<h1 class="section-title">Seu briefing completo</h1>
+							<p class="section-desc">
+								Revise tudo, corrija o que precisar e então exporte.
+							</p>
+						</div>
+					</div>
+					<div id="summary-output"></div>
+					<div class="export-banner">
+						<h3>Pronto para enviar.</h3>
+						<p>
+							Exporte o briefing para compartilhar com o designer ou salvar para
+							seus registros.
+						</p>
+						<div class="export-btns">
+							<button
+								class="btn-export btn-export-outline"
+								onclick="exportarTexto()"
+							>
+								📄 Exportar como texto
+							</button>
+							<button
+								class="btn-export btn-export-outline"
+								onclick="imprimirBriefing()"
+							>
+								🖨 Imprimir / salvar PDF
+							</button>
+						</div>
+						<p>Já enviou o briefing para o designer?</p>
+						<div class="export-enviado">
+							<button
+								class="btn-export btn-export-white"
+								onclick="
+									localStorage.removeItem('briefing_draft_data');
+									window.location.href = './obrigado.html?origem=briefing';
+								"
+							>
+								✅ Enviei meu briefing!
+							</button>
+						</div>
+					</div>
+					<div class="nav-buttons">
+						<button class="btn btn-ghost" data-goto="5">
+							<img
+								src="./resources/assets/icons/global/icone-nav-prev.svg"
+								alt="seta para esquerda"
+							/>
+							Voltar e editar
+						</button>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- Scripts -->
+		<script src="./resources/js/briefing/inputs.js" defer></script>
+		<script src="./resources/js/briefing/upload.js" defer></script>
+		<script src="./resources/js/briefing/summary.js" defer></script>
+		<script src="./resources/js/briefing/navigation.js" defer></script>
+		<script src="./resources/js/briefing/storage.js" defer></script>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+			defer
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+			defer
+		></script>
+
+		<script src="./resources/js/components/cursor.js" defer></script>
+		<script src="./resources/js/components/transicao.js" defer></script>
+	</body>
+</html>

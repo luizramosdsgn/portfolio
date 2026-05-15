@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+/* ════════════════════════════════════════════
+   PÁGINA OBRIGADO
+════════════════════════════════════════════ */
+
+.pagina-obrigado {
+	min-height: 90dvh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Container central */
+.obrigado-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 0;
+	z-index: 1;
+}
+
+/* ─── Check animado ─── */
+.check-wrap {
+	margin-bottom: 2rem;
+}
+
+.check-circle {
+	width: 80px;
+	height: 80px;
+	overflow: visible;
+}
+
+.check-ring {
+	animation: drawRing 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+}
+
+.check-mark {
+	animation: drawMark 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.95s forwards;
+}
+
+@keyframes drawRing {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes drawMark {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+/* ─── Conteúdo ─── */
+.obrigado-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+	max-width: 34rem;
+}
+
+.obrigado-titulo {
+	font-family: var(--font-display);
+	font-size: clamp(2.2rem, 5vw, 3.4rem);
+	font-weight: 400;
+	color: var(--text-primary);
+	line-height: 1.15;
+	letter-spacing: -0.03em;
+	animation: fadeUp 0.7s ease 0.5s both;
+}
+
+.obrigado-desc {
+	font-size: 1rem;
+	color: var(--text-secondary);
+	line-height: 1.75;
+	animation: fadeUp 0.7s ease 0.65s both;
+}
+
+/* ─── Meta (prazo / canal) ─── */
+.obrigado-meta {
+	display: flex;
+	gap: 1.5rem;
+	flex-wrap: wrap;
+	justify-content: center;
+	animation: fadeUp 0.7s ease 0.8s both;
+}
+
+.meta-item {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 0.9rem;
+	color: var(--text-secondary);
+	background: var(--surface-1);
+	border: 1px solid var(--border-subtle);
+	border-radius: var(--radius-pill);
+	padding: 0.5rem 1rem;
+}
+
+.meta-icone {
+	font-size: 1rem;
+}
+
+/* ─── Botões ─── */
+.obrigado-acoes {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 0.5rem;
+	animation: fadeUp 0.7s ease 0.95s both;
+}
+
+@keyframes fadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* ─── Responsivo ─── */
+@media (max-width: 600px) {
+	.pagina-obrigado {
+		padding: 100px 0 60px;
+	}
+
+	.obrigado-meta {
+		flex-direction: column;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.obrigado-acoes {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.obrigado-acoes .btn {
+		width: 100%;
+		max-width: 100%;
+		justify-content: center;
+	}
+}

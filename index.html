@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Luiz Ramos</title>
+
+		<!-- SEO -->
+		<meta
+			name="description"
+			content="Luiz Ramos é um Designer focado em criar identidades visuais, sites e landing pages que impulsionam o crescimento do seu negócio."
+		/>
+		<meta name="author" content="Luiz Ramos" />
+		<meta
+			name="keywords"
+			content="Designer, Web Design, Identidade Visual, Landing Page, UI, UX, Freelancer"
+		/>
+
+		<meta property="og:type" content="website" />
+		<!-- ALTERAR / CRIAR -->
+		<meta property="og:url" content="https://luizramos.com.br/" />
+		<meta property="og:title" content="Luiz Ramos | Designer Estratégico" />
+		<meta
+			property="og:description"
+			content="Crio marcas inesquecíveis e sites de alta conversão para o seu negócio."
+		/>
+		<!-- ALTERAR / CRIAR -->
+		<meta
+			property="og:image"
+			content="https://luizramos.com.br/resources/assets/img/global/thumb-compartilhamento.webp"
+		/>
+
+		<link rel="canonical" href="https://luizramos.com.br/" />
+		<link
+			rel="shortcut icon"
+			href="./resources/assets/icons/global/logo.svg"
+			type="image/svg+xml"
+		/>
+
+		<!-- Otimização -->
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<!-- Fontes -->
+		<link
+			rel="preload"
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
+			as="style"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
+		/>
+
+		<!-- CSS Global -->
+		<link rel="stylesheet" href="./resources/css/global/style.css" />
+		<link rel="stylesheet" href="./resources/css/global/fontes.css" />
+		<link rel="stylesheet" href="./resources/css/global/tokens.css" />
+
+		<!-- CSS Components -->
+		<link rel="stylesheet" href="./resources/css/components/cursor.css" />
+		<link rel="stylesheet" href="./resources/css/components/nav.css" />
+
+		<link rel="stylesheet" href="./resources/css/pages/index/hero.css" />
+		<link rel="stylesheet" href="./resources/css/pages/index/servicos.css" />
+		<link rel="stylesheet" href="./resources/css/components/btn-filtro.css" />
+		<link rel="stylesheet" href="./resources/css/pages/index/portfolio.css" />
+		<link
+			rel="stylesheet"
+			href="./resources/css/components/cards-projeto.css"
+		/>
+		<link rel="stylesheet" href="./resources/css/pages/index/processo.css" />
+		<link rel="stylesheet" href="./resources/css/pages/index/cta-final.css" />
+		<link rel="stylesheet" href="./resources/css/components/footer.css" />
+
+		<!-- CSS Components | Transição -->
+		<link rel="stylesheet" href="./resources/css/components/transicao.css" />
+	</head>
+	<body>
+		<!-- Components globais -->
+		<div class="transicao-overlay ini-revelando ativo" id="transicao-overlay">
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+		</div>
+
+		<div class="cursor-dot" data-cursor-dot></div>
+		<div class="cursor-outline" data-cursor-outline></div>
+
+		<div id="header-container"></div>
+
+		<!-- Sections -->
+		<section class="hero" id="inicio">
+			<div class="hero-container">
+				<div class="hero-content">
+					<div class="hero-text-side">
+						<p class="tag">Conexão e valor</p>
+
+						<div class="hero-titulos">
+							<h1>
+								A <span class="destaque-h1">sua marca</span> merece mais que um
+								design bonito.
+								<span class="destaque-h1">Merece resultados.</span>
+							</h1>
+							<p>
+								Crio identidades visuais, sites e landing pages que não só
+								impressionam visualmente,
+								<strong>mas impulsionam o crescimento do seu negócio.</strong>
+							</p>
+						</div>
+
+						<div class="hero-botoes">
+							<div class="brilho1">
+								<!--NOVO BOTÃO-->
+								<div class="brilho2">
+									<a href="portfolio.html" class="elementor-button">
+										<span class="elementor-button-text">Ver meus projetos</span>
+									</a>
+								</div>
+							</div>
+							<!--
+                        <a href="portfolio.html" class="btn btn-primario">Ver meus projetos <img src="./assets/icons/icone-btn.svg"
+              alt="Ícone de seta"></a>
+                        -->
+							<a href="#contato" class="btn btn-secundario">Fale Comigo</a>
+						</div>
+					</div>
+
+					<div class="hero-image-side">
+						<img
+							loading="lazy"
+							src="./resources/assets/img/index/luiz-imagem.webp"
+							alt="Foto de Luiz Ramos, designer gráfico"
+							class="hero-foto"
+						/>
+
+						<div class="bullet b-1 ativo">Branding</div>
+						<div class="bullet b-2">Performance</div>
+						<div class="bullet b-3">Conversão</div>
+						<div class="bullet b-4">Impacto</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="servicos" id="servicos">
+			<div class="container servicos-container">
+				<div class="servicos-header">
+					<span class="tag">Serviços</span>
+				</div>
+
+				<div class="servicos-cards">
+					<a href="portfolio.html" class="link-card">
+						<div class="card-servico">
+							<div class="card-conteudo">
+								<img
+									src="./resources/assets/icons/index/icone-caneta.svg"
+									alt="Ícone"
+									class="card-icone"
+								/>
+								<h3>Identidade Visual</h3>
+								<p>
+									Construa uma marca inesquecível que conecta com seu público e
+									se destaca da concorrência.
+								</p>
+							</div>
+							<div class="card-imagem-hover">
+								<img
+									src="./resources/assets/img/index/card-idv-1x.webp"
+									alt="Projeto de Design"
+									class="img-bg"
+									loading="lazy"
+								/>
+							</div>
+						</div>
+					</a>
+
+					<a href="portfolio.html" class="link-card">
+						<div class="card-servico">
+							<div class="card-conteudo">
+								<img
+									src="./resources/assets/icons/index/icone-notebook.svg"
+									alt="Ícone"
+									class="card-icone"
+								/>
+								<h3>
+									Landing Pages <br />
+									<span>(página de captura)</span>
+								</h3>
+								<p>
+									Transforme cliques em clientes. Landing pages que maximizam o
+									resultado de suas campanhas.
+								</p>
+							</div>
+							<div class="card-imagem-hover">
+								<img
+									src="./resources/assets/img/index/card-lp-1x.webp"
+									alt="Projeto de Design"
+									class="img-bg"
+									loading="lazy"
+								/>
+							</div>
+						</div>
+					</a>
+
+					<a href="portfolio.html" class="link-card">
+						<div class="card-servico">
+							<div class="card-conteudo">
+								<img
+									src="./resources/assets/icons/index/icone-social.svg"
+									alt="Ícone"
+									class="card-icone"
+								/>
+								<h3>Social Media</h3>
+								<p>
+									Criação de templates e conteúdo visual para redes sociais que
+									fortalecem sua presença digital.
+								</p>
+							</div>
+							<div class="card-imagem-hover">
+								<img
+									src="./resources/assets/img/index/card-social-1x.webp"
+									alt="Projeto de Design"
+									class="img-bg"
+									loading="lazy"
+								/>
+							</div>
+						</div>
+					</a>
+
+					<a href="portfolio.html" class="link-card">
+						<div class="card-servico">
+							<div class="card-conteudo">
+								<img
+									src="./resources/assets/icons/index/icone-notebook.svg"
+									alt="Ícone"
+									class="card-icone"
+								/>
+								<h3>Sites Institucionais</h3>
+								<p>
+									A sua vitrine digital 24/7. Sites institucionais que
+									transformam visitantes em oportunidades.
+								</p>
+							</div>
+							<div class="card-imagem-hover">
+								<img
+									src="./resources/assets/img/index/card-site-1x.webp"
+									alt="Projeto de Design"
+									class="img-bg"
+									loading="lazy"
+								/>
+							</div>
+						</div>
+					</a>
+
+					<a href="portfolio.html" class="link-card">
+						<div class="card-servico">
+							<div class="card-conteudo">
+								<img
+									src="./resources/assets/icons/index/icone-grafico.svg"
+									alt="Ícone"
+									class="card-icone"
+								/>
+								<h3>Material Gráfico</h3>
+								<p>
+									Desenvolvimento de cartões de visita, papelaria corportiva,
+									banners, folders e outros materiais impressos.
+								</p>
+							</div>
+							<div class="card-imagem-hover">
+								<img
+									src="./resources/assets/img/index/card-grafico-1x.webp"
+									alt="Projeto de Design"
+									class="img-bg"
+									loading="lazy"
+								/>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="ultimos-trabalhos" id="trabalhos">
+			<div class="container trabalhos-container">
+				<div class="trabalhos-header">
+					<span class="tag">Portfólio</span>
+					<div class="hero-titulos">
+						<h1>Últimos <span class="destaque-h1">Trabalhos</span></h1>
+						<p>
+							Conheça alguns dos projetos que desenvolvemos para nossos
+							clientes.
+						</p>
+					</div>
+				</div>
+
+				<div class="trabalhos-filtros">
+					<button class="btn-filtro ativo" data-filter="todos">Todos</button>
+					<button class="btn-filtro" data-filter="identidade">Identidade Visual</button>
+					<button class="btn-filtro" data-filter="sm">Social Media</button>
+					<button class="btn-filtro" data-filter="web-design">Web design</button>
+				</div>
+
+				<div class="carrossel-wrapper">
+					<button class="btn-nav nav-prev" aria-label="Anterior">
+						<img
+							src="./resources/assets/icons/global/icone-nav-prev.svg"
+							alt="Anterior"
+						/>
+					</button>
+
+					<div class="carrossel-track" id="carrossel-track"></div>
+
+					<button class="btn-nav nav-next" aria-label="Próximo">
+						<img
+							src="./resources/assets/icons/global/icone-nav-next.svg"
+							alt="Próximo"
+						/>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="processo" id="metodologia">
+			<div class="container processo-container">
+				<div class="processo-left">
+					<span class="tag">Como eu trabalho</span>
+					<h1>Do briefing à <span class="destaque-h1">entrega final</span></h1>
+					<p>
+						Um processo transparente e organizado para garantir que seu projeto
+						seja entregue com a máxima qualidade e dentro do prazo.
+					</p>
+					<div class="brilho1">
+						<!--NOVO BOTÃO-->
+						<div class="brilho2">
+							<a href="contato.html" class="elementor-button">
+								<span class="elementor-button-text">Iniciar um Projeto</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="processo-right">
+					<div class="processo-tabs-nav">
+						<button class="btn-tab ativo" data-target="tab-metodologia">
+							Metodologia
+						</button>
+						<button class="btn-tab" data-target="tab-entregaveis">
+							O que você recebe
+						</button>
+					</div>
+
+					<div class="tab-content ativo" id="tab-metodologia">
+						<div class="card-processo ativo">
+							<span class="numero-passo">01</span>
+							<h3>Briefing e Pesquisa</h3>
+							<p>
+								Imersão no seu negócio para entender seus objetivos,
+								público-alvo e referências do mercado.
+							</p>
+						</div>
+
+						<div class="card-processo">
+							<span class="numero-passo">02</span>
+							<h3>Conceito e Estratégia</h3>
+							<p>
+								Definição da direção visual e estruturação do mapa do site ou
+								wireframes.
+							</p>
+						</div>
+
+						<div class="card-processo">
+							<span class="numero-passo">03</span>
+							<h3>Design e Desenvolvimento</h3>
+							<p>
+								Criação das interfaces em alta fidelidade no Figma e codificação
+								limpa e responsiva.
+							</p>
+						</div>
+
+						<div class="card-processo">
+							<span class="numero-passo">04</span>
+							<h3>Revisão e Refinamento</h3>
+							<p>
+								Ajustes finais, testes de performance e SEO antes de colocar o
+								projeto no ar.
+							</p>
+						</div>
+					</div>
+
+					<div class="tab-content" id="tab-entregaveis">
+						<a href="#contato">
+							<div class="card-processo">
+								<img
+									class="icone-entregavel"
+									src="./resources/assets/icons/index/icone-caneta.svg"
+									alt="Identidade Visual"
+								/>
+								<h3>Identidade Visual</h3>
+								<ul>
+									<li>Logotipo Principal e Variações</li>
+									<li>Paleta de Cores Institucional</li>
+									<li>Tipografia</li>
+									<li>Manual da Marca (Brandbook)</li>
+								</ul>
+							</div>
+						</a>
+
+						<a href="#contato">
+							<div class="card-processo">
+								<img
+									class="icone-entregavel"
+									src="./resources/assets/icons/index/icone-notebook.svg"
+									alt="Web Design"
+								/>
+								<h3>Landing Page / Site</h3>
+								<ul>
+									<li>Design Responsivo (Mobile First)</li>
+									<li>Otimização para SEO Técnico</li>
+									<li>Integração com Analytics</li>
+									<li>Código-fonte otimizado</li>
+								</ul>
+							</div>
+						</a>
+
+						<a href="#contato">
+							<div class="card-processo">
+								<img
+									class="icone-entregavel"
+									src="./resources/assets/icons/index/icone-social.svg"
+									alt="Web Design"
+								/>
+								<h3>Social Media</h3>
+								<ul>
+									<li>6, 8 ou 12 posts estratégicos</li>
+									<li>Gestão das redes (tempo a negociar)</li>
+									<li>Planejamento do posts (textos dos posts)</li>
+									<li>2 a 4 revisões dos materiais</li>
+								</ul>
+							</div>
+						</a>
+
+						<a href="#contato">
+							<div class="card-processo">
+								<img
+									class="icone-entregavel"
+									src="./resources/assets/icons/index/icone-grafico.svg"
+									alt="Web Design"
+								/>
+								<h3>Materiais Gráficos</h3>
+								<ul>
+									<li>Cartão de visitas</li>
+									<li>Folder</li>
+									<li>Flyer</li>
+									<li>Banner</li>
+									<li>Cardápio</li>
+									<li>Bloco de notas</li>
+									<li>E muitos outros</li>
+								</ul>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="cta-final" id="contato">
+			<div class="container cta-container">
+				<span class="tag">Vamos conversar?</span>
+
+				<h1>Tem um projeto em mente?</h1>
+
+				<p>
+					Estou ansioso para entender os seus desafios e explorar como podemos
+					criar algo incrível juntos.
+					<strong>Preencha o formulário abaixo</strong> com os detalhes do seu
+					projeto, ou,
+					<strong>se preferir, agende uma chamada de 15 minutos</strong> sem
+					compromisso para discutirmos as suas ideias.
+				</p>
+
+				<div class="cta-botoes">
+					<div class="brilho1">
+						<!--NOVO BOTÃO-->
+						<div class="brilho2">
+							<a href="contato.html" class="elementor-button">
+								<span class="elementor-button-text">Solicitar Proposta</span>
+							</a>
+						</div>
+					</div>
+					<!--
+                    <a href="contato.html" class="btn btn-primario">
+                        Solicitar Proposta <img src="./assets/icons/icone-btn.svg" alt="Ícone de seta">
+                    </a>
+                -->
+
+					<a
+						href="https://wa.me/+5581986749150"
+						target="_blank"
+						class="btn btn-secundario"
+						>Chamar no WhatsApp</a
+					>
+				</div>
+			</div>
+		</section>
+
+		<div id="footer-container"></div>
+
+		<!-- Scripts -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+			defer
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+			defer
+		></script>
+
+		<script src="./resources/js/components/header-footer.js"></script>
+		<script src="./resources/js/components/cta-principal.js" defer></script>
+
+		<script src="./resources/js/components/banco-projetos.js"></script>
+		<script src="./resources/js/components/botoes-filtro.js" defer></script>
+
+		<script src="./resources/js/components/nav.js" defer></script>
+
+		<script src="./resources/js/index/hero.js" defer></script>
+		<script src="./resources/js/index/portfolio.js" defer></script>
+		<script src="./resources/js/index/processo.js" defer></script>
+
+		<script src="./resources/js/components/cursor.js"></script>
+
+		<script src="./resources/js/index/animacoes.js"></script>
+
+		<script src="./resources/js/components/transicao.js" defer></script>
+	</body>
+</html>

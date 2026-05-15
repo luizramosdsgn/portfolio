@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Obrigado! | Luiz Ramos</title>
+
+		<!-- SEO -->
+		<meta
+			name="description"
+			content="Mensagem recebida! Em breve entrarei em contato para darmos início ao seu projeto."
+		/>
+		<meta name="robots" content="noindex, nofollow" />
+		<link rel="canonical" href="https://luizramos.com.br/obrigado" />
+		<link
+			rel="shortcut icon"
+			href="./resources/assets/icons/global/logo.svg"
+			type="image/svg+xml"
+		/>
+
+		<!-- Otimização -->
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<!-- Fontes -->
+		<link
+			rel="preload"
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
+			as="style"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
+		/>
+
+		<!-- CSS Global -->
+		<link rel="stylesheet" href="./resources/css/global/style.css" />
+		<link rel="stylesheet" href="./resources/css/global/fontes.css" />
+		<link rel="stylesheet" href="./resources/css/global/tokens.css" />
+
+		<!-- CSS Components -->
+		<link rel="stylesheet" href="./resources/css/components/cursor.css" />
+		<link rel="stylesheet" href="./resources/css/components/nav.css" />
+		<link rel="stylesheet" href="./resources/css/components/footer.css" />
+
+		<!-- CSS Obrigado -->
+		<link rel="stylesheet" href="./resources/css/pages/obrigado/obrigado.css" />
+
+		<!-- CSS Components | Transição -->
+		<link rel="stylesheet" href="./resources/css/components/transicao.css" />
+	</head>
+	<body>
+		<!-- Tela de Transição -->
+		<div class="transicao-overlay ini-revelando ativo" id="transicao-overlay">
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+			<div class="transicao-coluna"></div>
+		</div>
+
+		<!-- Cursor Personalizado -->
+		<div class="cursor-dot" data-cursor-dot></div>
+		<div class="cursor-outline" data-cursor-outline></div>
+
+		<main class="pagina-obrigado">
+			<div class="container obrigado-container">
+				<!-- Ícone animado de confirmação -->
+				<div class="check-wrap" aria-hidden="true">
+					<svg
+						class="check-circle"
+						viewBox="0 0 80 80"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<circle
+							class="check-ring"
+							cx="40"
+							cy="40"
+							r="36"
+							stroke="var(--accent)"
+							stroke-width="2"
+							stroke-dasharray="226"
+							stroke-dashoffset="226"
+						/>
+						<polyline
+							class="check-mark"
+							points="24,41 35,52 57,30"
+							stroke="var(--accent)"
+							stroke-width="3"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							fill="none"
+							stroke-dasharray="50"
+							stroke-dashoffset="50"
+						/>
+					</svg>
+				</div>
+
+				<div class="obrigado-content">
+					<span class="tag">Recebido com sucesso</span>
+
+					<h1 class="obrigado-titulo">
+						Obrigado pelo<br />
+						<span class="destaque-h1">seu contato!</span>
+					</h1>
+
+					<p class="obrigado-desc" id="obrigado-desc">
+						<strong>Recebi sua mensagem</strong> e já estou analisando. Entrarei em contato em
+						breve para darmos início à transformação da sua marca.
+					</p>
+
+					<div class="obrigado-meta">
+						<div class="meta-item">
+							<span class="meta-icone">⏱</span>
+							<span>Resposta em até <strong>24 horas úteis</strong></span>
+						</div>
+						<div class="meta-item">
+							<span class="meta-icone">📲</span>
+							<span>Via <strong>e-mail ou WhatsApp</strong></span>
+						</div>
+					</div>
+
+					<div class="obrigado-acoes">
+						<a href="./index.html" class="btn-secundario btn">
+							← Voltar ao início
+						</a>
+						<a
+							href="https://www.instagram.com/luizramos.07"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="btn-secundario btn"
+						>
+							Me seguir no Instagram
+						</a>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<div id="footer-container"></div>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+			defer
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+			defer
+		></script>
+
+		<script src="./resources/js/components/header-footer.js" defer></script>
+		<script src="./resources/js/components/nav.js" defer></script>
+		<script src="./resources/js/components/cursor.js" defer></script>
+		<script src="./resources/js/components/transicao.js" defer></script>
+
+		<script>
+			// Detectar a origem do formulário via query param e ajustar a mensagem
+			const params = new URLSearchParams(window.location.search);
+			const origem = params.get("origem");
+
+			if (origem === "briefing") {
+				document.getElementById("obrigado-desc").textContent =
+					"Recebi seu briefing completo! Vou analisar com atenção e entrarei em contato em breve para alinharmos os próximos passos do seu projeto.";
+			}
+		</script>
+	</body>
+</html>
